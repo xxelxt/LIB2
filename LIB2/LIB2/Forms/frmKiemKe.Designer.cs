@@ -108,6 +108,7 @@
             // 
             this.tabPageDMBT.Location = new System.Drawing.Point(4, 22);
             this.tabPageDMBT.Name = "tabPageDMBT";
+            this.tabPageDMBT.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageDMBT.Size = new System.Drawing.Size(1016, 745);
             this.tabPageDMBT.TabIndex = 7;
             this.tabPageDMBT.Text = "Danh mục bồi thường";
@@ -117,6 +118,7 @@
             // 
             this.tabPageBCKK.Location = new System.Drawing.Point(4, 22);
             this.tabPageBCKK.Name = "tabPageBCKK";
+            this.tabPageBCKK.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageBCKK.Size = new System.Drawing.Size(1016, 745);
             this.tabPageBCKK.TabIndex = 8;
             this.tabPageBCKK.Text = "Báo cáo kiểm kê";

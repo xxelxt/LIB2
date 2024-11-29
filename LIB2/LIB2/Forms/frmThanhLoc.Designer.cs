@@ -71,6 +71,7 @@
             // 
             this.tabPageDMTL.Location = new System.Drawing.Point(4, 22);
             this.tabPageDMTL.Name = "tabPageDMTL";
+            this.tabPageDMTL.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageDMTL.Size = new System.Drawing.Size(1016, 745);
             this.tabPageDMTL.TabIndex = 7;
             this.tabPageDMTL.Text = "Danh mục xử lý";
@@ -80,6 +81,7 @@
             // 
             this.tabPageBCTL.Location = new System.Drawing.Point(4, 22);
             this.tabPageBCTL.Name = "tabPageBCTL";
+            this.tabPageBCTL.Padding = new System.Windows.Forms.Padding(3);
             this.tabPageBCTL.Size = new System.Drawing.Size(1016, 745);
             this.tabPageBCTL.TabIndex = 8;
             this.tabPageBCTL.Text = "Báo cáo thanh lọc";

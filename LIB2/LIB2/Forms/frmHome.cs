@@ -59,103 +59,45 @@ namespace LIB2.Forms
 
         private void frmHome_Load(object sender, EventArgs e)
         {
-            lblSoDonThueThang.Text = BaoCaoDAL.GetSoDonThueThangNay().ToString();
-            lblSoDonThueChuaTra.Text = BaoCaoDAL.GetSoDonThueChuaTraThangNay().ToString();
-            lblDoanhThuThang.Text = FormatCurrency(BaoCaoDAL.GetDoanhThuThangNay());
-
-            BCSach10Ngay();
+            
         }
 
-        public void SetDoanhThuCardVisible(bool isVisible)
+        public event EventHandler DirectToMTClicked;
+        public event EventHandler DirectToDPClicked;
+        public event EventHandler DirectToPhatClicked;
+
+        public event EventHandler DirectToNhapClicked;
+        public event EventHandler DirectToKiemKeClicked;
+        public event EventHandler DirectToThanhLocClicked;
+
+        private void btnDirectToMT_Click(object sender, EventArgs e)
         {
-            lblDoanhThu.Visible = isVisible;
-            lblDoanhThuThang.Visible = isVisible;
-            materialCardDT.Visible = isVisible;
-            btnDirectToBaoCao.Visible = isVisible;
+            DirectToMTClicked?.Invoke(sender, e);
         }
 
-        private void BCSach10Ngay()
+        private void btnDirectToDP_Click(object sender, EventArgs e)
         {
-            DataTable dt = BaoCaoDAL.GetSoSachThue10Ngay();
-
-            chrHome.Series.Clear();
-            chrHome.Legends.Clear();
-            chrHome.Titles.Clear();
-            chrHome.ChartAreas.Clear();
-
-            ChartArea chartArea = new ChartArea();
-            chartArea.AxisX.LabelStyle.Format = "dd/MM";
-            chartArea.AxisX.Interval = 1;
-            chartArea.AxisX.IntervalType = DateTimeIntervalType.Days;
-            chartArea.AxisX.IntervalAutoMode = IntervalAutoMode.FixedCount;
-            chartArea.AxisX.MajorGrid.LineColor = Color.LightGray;
-            chartArea.AxisY.MajorGrid.LineColor = Color.LightGray;
-            chartArea.AxisX.LabelStyle.Font = new Font("Microsoft Sans Serif", 14);
-            chartArea.AxisY.LabelStyle.Font = new Font("Microsoft Sans Serif", 14);
-            chrHome.ChartAreas.Add(chartArea);
-
-            Series series = new Series("Số sách thuê")
-            {
-                XValueType = ChartValueType.Date,
-                ChartType = SeriesChartType.Line,
-                Font = new Font("Microsoft Sans Serif", 14),
-                BorderWidth = 3
-            };
-
-            int maxBooksRented = 0;
-            foreach (DataRow row in dt.Rows)
-            {
-                DateTime date = Convert.ToDateTime(row["Date"]);
-                int booksRented = Convert.ToInt32(row["BooksRented"]);
-
-                series.Points.AddXY(date, booksRented);
-                series.Points[series.Points.Count - 1].Label = booksRented.ToString();
-
-                if (booksRented > maxBooksRented)
-                {
-                    maxBooksRented = booksRented;
-                }
-            }
-
-            chrHome.Series.Add(series);
-            chrHome.ChartAreas[0].AxisY.Maximum = maxBooksRented + (maxBooksRented * 0.1);
-
-            Title title = new Title("Báo cáo số sách thuê trong 10 ngày gần nhất", Docking.Top, new Font("Arial", 18, FontStyle.Bold), Color.Black);
-            chrHome.Titles.Add(title);
-
-            Legend legend = new Legend
-            {
-                Docking = Docking.Bottom,
-                Alignment = StringAlignment.Center,
-                Font = new Font("Microsoft Sans Serif", 12, FontStyle.Regular)
-            };
-            chrHome.Legends.Add(legend);
-
-            series.IsVisibleInLegend = false;
+            DirectToDPClicked?.Invoke(sender, e);
         }
 
-        public event EventHandler DirectToThueClicked;
-        public event EventHandler DirectToTraClicked;
-        public event EventHandler DirectToBaoCaoClicked;
-
-        private void btnDirectToThue_Click(object sender, EventArgs e)
+        private void btnDirectToPhat_Click(object sender, EventArgs e)
         {
-            DirectToThueClicked?.Invoke(sender, e); // Gọi sự kiện DirectToThueClicked
+            DirectToPhatClicked?.Invoke(sender, e);
         }
 
-        private void btnDirectToTra_Click(object sender, EventArgs e)
+        private void btnDirectToNhap_Click(object sender, EventArgs e)
         {
-            DirectToTraClicked?.Invoke(sender, e); // Gọi sự kiện DirectToThueClicked
+            DirectToNhapClicked?.Invoke(sender, e);
         }
 
-        private void btnDirectToBaoCao_Click(object sender, EventArgs e)
+        private void btnDirectToKiemKe_Click(object sender, EventArgs e)
         {
-            DirectToBaoCaoClicked?.Invoke(sender, e); // Gọi sự kiện DirectToBaoCaoClicked
+            DirectToKiemKeClicked?.Invoke(sender, e);
         }
 
-        private string FormatCurrency(decimal value)
+        private void btnDirectToTL_Click(object sender, EventArgs e)
         {
-            return value.ToString("N0", CultureInfo.CreateSpecificCulture("vi-VN")) + "đ";
+            DirectToThanhLocClicked?.Invoke(sender, e);
         }
     }
 }

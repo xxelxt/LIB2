@@ -82,7 +82,7 @@
             this.materialTabControl.Multiline = true;
             this.materialTabControl.Name = "materialTabControl";
             this.materialTabControl.SelectedIndex = 0;
-            this.materialTabControl.Size = new System.Drawing.Size(1228, 955);
+            this.materialTabControl.Size = new System.Drawing.Size(1196, 877);
             this.materialTabControl.TabIndex = 0;
             this.materialTabControl.SelectedIndexChanged += new System.EventHandler(this.mainTabControl_SelectedIndexChanged);
             // 
@@ -93,7 +93,7 @@
             this.tabPageHome.Location = new System.Drawing.Point(4, 58);
             this.tabPageHome.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageHome.Name = "tabPageHome";
-            this.tabPageHome.Size = new System.Drawing.Size(1220, 893);
+            this.tabPageHome.Size = new System.Drawing.Size(1188, 815);
             this.tabPageHome.TabIndex = 0;
             this.tabPageHome.Text = "Trang chủ";
             this.tabPageHome.UseVisualStyleBackColor = true;
@@ -102,19 +102,19 @@
             // 
             this.tabPageTL.BackColor = System.Drawing.Color.Transparent;
             this.tabPageTL.ImageKey = "tabPageTLIcon.png";
-            this.tabPageTL.Location = new System.Drawing.Point(4, 31);
+            this.tabPageTL.Location = new System.Drawing.Point(4, 58);
             this.tabPageTL.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageTL.Name = "tabPageTL";
-            this.tabPageTL.Size = new System.Drawing.Size(1220, 920);
+            this.tabPageTL.Size = new System.Drawing.Size(1220, 893);
             this.tabPageTL.TabIndex = 1;
             this.tabPageTL.Text = "Tài liệu";
             // 
             // tabPageMT
             // 
             this.tabPageMT.ImageKey = "tabPageMTIcon.png";
-            this.tabPageMT.Location = new System.Drawing.Point(4, 31);
+            this.tabPageMT.Location = new System.Drawing.Point(4, 58);
             this.tabPageMT.Name = "tabPageMT";
-            this.tabPageMT.Size = new System.Drawing.Size(1220, 920);
+            this.tabPageMT.Size = new System.Drawing.Size(1220, 893);
             this.tabPageMT.TabIndex = 4;
             this.tabPageMT.Text = "Mượn/trả";
             this.tabPageMT.UseVisualStyleBackColor = true;
@@ -122,9 +122,9 @@
             // tabPageDP
             // 
             this.tabPageDP.ImageKey = "tabPageDPIcon.png";
-            this.tabPageDP.Location = new System.Drawing.Point(4, 31);
+            this.tabPageDP.Location = new System.Drawing.Point(4, 58);
             this.tabPageDP.Name = "tabPageDP";
-            this.tabPageDP.Size = new System.Drawing.Size(1220, 920);
+            this.tabPageDP.Size = new System.Drawing.Size(1220, 893);
             this.tabPageDP.TabIndex = 5;
             this.tabPageDP.Text = "Đặt phòng";
             this.tabPageDP.UseVisualStyleBackColor = true;
@@ -132,9 +132,9 @@
             // tabPagePhat
             // 
             this.tabPagePhat.ImageKey = "tabPagePhatIcon.png";
-            this.tabPagePhat.Location = new System.Drawing.Point(4, 31);
+            this.tabPagePhat.Location = new System.Drawing.Point(4, 58);
             this.tabPagePhat.Name = "tabPagePhat";
-            this.tabPagePhat.Size = new System.Drawing.Size(1220, 920);
+            this.tabPagePhat.Size = new System.Drawing.Size(1220, 893);
             this.tabPagePhat.TabIndex = 6;
             this.tabPagePhat.Text = "Tra cứu phạt";
             this.tabPagePhat.UseVisualStyleBackColor = true;
@@ -142,9 +142,9 @@
             // tabPageRaVao
             // 
             this.tabPageRaVao.ImageKey = "tabPageRaVaoIcon.png";
-            this.tabPageRaVao.Location = new System.Drawing.Point(4, 31);
+            this.tabPageRaVao.Location = new System.Drawing.Point(4, 58);
             this.tabPageRaVao.Name = "tabPageRaVao";
-            this.tabPageRaVao.Size = new System.Drawing.Size(1220, 920);
+            this.tabPageRaVao.Size = new System.Drawing.Size(1220, 893);
             this.tabPageRaVao.TabIndex = 21;
             this.tabPageRaVao.Text = "Ra vào thư viện";
             this.tabPageRaVao.UseVisualStyleBackColor = true;
@@ -152,9 +152,9 @@
             // tabPageBD
             // 
             this.tabPageBD.ImageKey = "tabPageBDIcon.png";
-            this.tabPageBD.Location = new System.Drawing.Point(4, 31);
+            this.tabPageBD.Location = new System.Drawing.Point(4, 58);
             this.tabPageBD.Name = "tabPageBD";
-            this.tabPageBD.Size = new System.Drawing.Size(1220, 920);
+            this.tabPageBD.Size = new System.Drawing.Size(1220, 893);
             this.tabPageBD.TabIndex = 7;
             this.tabPageBD.Text = "Bạn đọc";
             this.tabPageBD.UseVisualStyleBackColor = true;
@@ -162,9 +162,9 @@
             // tabPageNV
             // 
             this.tabPageNV.ImageKey = "tabPageNVIcon.png";
-            this.tabPageNV.Location = new System.Drawing.Point(4, 31);
+            this.tabPageNV.Location = new System.Drawing.Point(4, 58);
             this.tabPageNV.Name = "tabPageNV";
-            this.tabPageNV.Size = new System.Drawing.Size(1220, 920);
+            this.tabPageNV.Size = new System.Drawing.Size(1220, 893);
             this.tabPageNV.TabIndex = 8;
             this.tabPageNV.Text = "Nhân viên";
             this.tabPageNV.UseVisualStyleBackColor = true;
@@ -172,9 +172,9 @@
             // tabPageKho
             // 
             this.tabPageKho.ImageKey = "tabPageKhoIcon.png";
-            this.tabPageKho.Location = new System.Drawing.Point(4, 31);
+            this.tabPageKho.Location = new System.Drawing.Point(4, 58);
             this.tabPageKho.Name = "tabPageKho";
-            this.tabPageKho.Size = new System.Drawing.Size(1220, 920);
+            this.tabPageKho.Size = new System.Drawing.Size(1220, 893);
             this.tabPageKho.TabIndex = 12;
             this.tabPageKho.Text = "Kho";
             this.tabPageKho.UseVisualStyleBackColor = true;
@@ -182,9 +182,9 @@
             // tabPageNCC
             // 
             this.tabPageNCC.ImageKey = "tabPageNCCIcon.png";
-            this.tabPageNCC.Location = new System.Drawing.Point(4, 31);
+            this.tabPageNCC.Location = new System.Drawing.Point(4, 58);
             this.tabPageNCC.Name = "tabPageNCC";
-            this.tabPageNCC.Size = new System.Drawing.Size(1220, 920);
+            this.tabPageNCC.Size = new System.Drawing.Size(1220, 893);
             this.tabPageNCC.TabIndex = 13;
             this.tabPageNCC.Text = "Nhà cung cấp";
             this.tabPageNCC.UseVisualStyleBackColor = true;
@@ -192,9 +192,9 @@
             // tabPageNXB
             // 
             this.tabPageNXB.ImageKey = "tabPageNXBIcon.png";
-            this.tabPageNXB.Location = new System.Drawing.Point(4, 31);
+            this.tabPageNXB.Location = new System.Drawing.Point(4, 58);
             this.tabPageNXB.Name = "tabPageNXB";
-            this.tabPageNXB.Size = new System.Drawing.Size(1220, 920);
+            this.tabPageNXB.Size = new System.Drawing.Size(1220, 893);
             this.tabPageNXB.TabIndex = 14;
             this.tabPageNXB.Text = "Nhà xuất bản";
             this.tabPageNXB.UseVisualStyleBackColor = true;
@@ -297,7 +297,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 1038);
+            this.ClientSize = new System.Drawing.Size(1200, 960);
             this.Controls.Add(this.materialTabControl);
             this.DrawerShowIconsWhenHidden = true;
             this.DrawerTabControl = this.materialTabControl;

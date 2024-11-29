@@ -583,7 +583,7 @@ namespace LIB2.Forms
 
             if (!string.IsNullOrEmpty(maKH))
             {
-                txtTenKH.Text = KhachHangDAL.GetTenKhachHangByMa(maKH);
+                //txtTenKH.Text = KhachHangDAL.GetTenKhachHangByMa(maKH);
             }
             else
             {
@@ -611,23 +611,23 @@ namespace LIB2.Forms
 
             if (!string.IsNullOrEmpty(maSach))
             {
-                var sachInfo = SachDAL.GetTenGiaSachByMa(maSach);
-                if (sachInfo != null)
-                {
-                    txtTenSach.Text = sachInfo.Item1;
+                //var sachInfo = SachDAL.GetTenGiaSachByMa(maSach);
+                //if (sachInfo != null)
+                //{
+                //    txtTenSach.Text = sachInfo.Item1;
 
-                    // Lấy đơn giá thuê
-                    string donGiaThueStr = sachInfo.Item2;
-                    txtGiaThue.Tag = donGiaThueStr; // Sử dụng Tag để lưu đơn giá thuê
+                //    // Lấy đơn giá thuê
+                //    string donGiaThueStr = sachInfo.Item2;
+                //    txtGiaThue.Tag = donGiaThueStr; // Sử dụng Tag để lưu đơn giá thuê
 
-                    // Tính giá thuê
-                    CalculateGiaThue();
-                }
-                else
-                {
-                    txtTenSach.Text = string.Empty;
-                    txtGiaThue.Text = string.Empty;
-                }
+                //    // Tính giá thuê
+                //    CalculateGiaThue();
+                //}
+                //else
+                //{
+                //    txtTenSach.Text = string.Empty;
+                //    txtGiaThue.Text = string.Empty;
+                //}
             }
             else
             {

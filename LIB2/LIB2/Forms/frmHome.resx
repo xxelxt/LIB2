@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnDirectToThue.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDirectToMT.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAHxJREFUWEft
         18EJgDAQRNFpwgq8WYVNebcAK7Ee+1ECESR4WjYw4n+wlwjyIYQQCQA+ZZO0tIsuVklnnb396GCQdLhH
@@ -126,7 +126,7 @@
         tdod3JUAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnDirectToBaoCao.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDirectToDP.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAHxJREFUWEft
         18EJgDAQRNFpwgq8WYVNebcAK7Ee+1ECESR4WjYw4n+wlwjyIYQQCQA+ZZO0tIsuVklnnb396GCQdLhH
@@ -134,7 +134,31 @@
         tdod3JUAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnDirectToTra.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnDirectToPhat.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAHxJREFUWEft
+        18EJgDAQRNFpwgq8WYVNebcAK7Ee+1ECESR4WjYw4n+wlwjyIYQQCQA+ZZO0tIsuVklnnb396GCQdLhH
+        TkQmITILkVn+GznXGyJz0iLHx496TjjSPrCw3uJsXQ5JFuKiiIsiLso6zv7RVG4J27ib9cMdAF5cO8eY
+        tdod3JUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnDirectToTL.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAHxJREFUWEft
+        18EJgDAQRNFpwgq8WYVNebcAK7Ee+1ECESR4WjYw4n+wlwjyIYQQCQA+ZZO0tIsuVklnnb396GCQdLhH
+        TkQmITILkVn+GznXGyJz0iLHx496TjjSPrCw3uJsXQ5JFuKiiIsiLso6zv7RVG4J27ib9cMdAF5cO8eY
+        tdod3JUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnDirectToKiemKe.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAHxJREFUWEft
+        18EJgDAQRNFpwgq8WYVNebcAK7Ee+1ECESR4WjYw4n+wlwjyIYQQCQA+ZZO0tIsuVklnnb396GCQdLhH
+        TkQmITILkVn+GznXGyJz0iLHx496TjjSPrCw3uJsXQ5JFuKiiIsiLso6zv7RVG4J27ib9cMdAF5cO8eY
+        tdod3JUAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnDirectToNhap.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAABGdBTUEAALGPC/xhBQAAAHxJREFUWEft
         18EJgDAQRNFpwgq8WYVNebcAK7Ee+1ECESR4WjYw4n+wlwjyIYQQCQA+ZZO0tIsuVklnnb396GCQdLhH

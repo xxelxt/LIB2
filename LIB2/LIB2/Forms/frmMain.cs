@@ -122,9 +122,13 @@ namespace LIB2
             tabPageHome.Controls.Add(childFormHome);
             childFormHome.Show();
 
-            //childFormHome.DirectToThueClicked += FrmHome_DirectToThueClicked;
-            //childFormHome.DirectToTraClicked += FrmHome_DirectToTraClicked;
-            //childFormHome.DirectToBaoCaoClicked += FrmHome_DirectToBaoCaoClicked;
+            childFormHome.DirectToMTClicked += FrmHome_DirectToMTClicked;
+            childFormHome.DirectToDPClicked += FrmHome_DirectToDPClicked;
+            childFormHome.DirectToPhatClicked += FrmHome_DirectToPhatClicked;
+
+            childFormHome.DirectToNhapClicked += FrmHome_DirectToNhapClicked;
+            childFormHome.DirectToKiemKeClicked += FrmHome_DirectToKiemKeClicked;
+            childFormHome.DirectToThanhLocClicked += FrmHome_DirectToThanhLocClicked;
         }
 
         private void initFormTaiLieu()
@@ -293,7 +297,7 @@ namespace LIB2
 
         private void UpdateTabVisibility()
         {
-            childFormHome.SetDoanhThuCardVisible(this.currentRole == UserRole.Admin);
+            // childFormHome.SetDoanhThuCardVisible(this.currentRole == UserRole.Admin);
 
             if (this.currentRole == UserRole.User)
             {
@@ -321,19 +325,34 @@ namespace LIB2
             }
         }
 
-        private void FrmHome_DirectToThueClicked(object sender, EventArgs e)
+        private void FrmHome_DirectToMTClicked(object sender, EventArgs e)
         {
-             // materialTabControl.SelectedTab = tabPageThue;
+            materialTabControl.SelectedTab = tabPageMT;
         }
 
-        private void FrmHome_DirectToTraClicked(object sender, EventArgs e)
+        private void FrmHome_DirectToDPClicked(object sender, EventArgs e)
         {
-            // materialTabControl.SelectedTab = tabPageTra;
+             materialTabControl.SelectedTab = tabPageDP;
         }
 
-        private void FrmHome_DirectToBaoCaoClicked(object sender, EventArgs e)
+        private void FrmHome_DirectToPhatClicked(object sender, EventArgs e)
         {
-            // materialTabControl.SelectedTab = tabPageBC;
+             materialTabControl.SelectedTab = tabPagePhat;
+        }
+
+        private void FrmHome_DirectToNhapClicked(object sender, EventArgs e)
+        {
+             materialTabControl.SelectedTab = tabPageNhap;
+        }
+
+        private void FrmHome_DirectToKiemKeClicked(object sender, EventArgs e)
+        {
+             materialTabControl.SelectedTab = tabPageKiemKe;
+        }
+
+        private void FrmHome_DirectToThanhLocClicked(object sender, EventArgs e)
+        {
+             materialTabControl.SelectedTab = tabPageThanhLoc;
         }
     }
 };
