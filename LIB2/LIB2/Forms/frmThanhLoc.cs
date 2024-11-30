@@ -1,4 +1,5 @@
 ﻿using LIB2.Class;
+using LIB2.Class.Types;
 using LIB2.DAL;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -11,6 +12,9 @@ namespace LIB2.Forms
 {
     public partial class FrmThanhLoc : MaterialForm
     {
+        public UserRole currentRole; 
+        public string Username { get; set; }
+        
         private MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
 
         public FrmThanhLoc()
@@ -46,6 +50,10 @@ namespace LIB2.Forms
             initForm(childFormDMTL);
             tabPageDMTL.Controls.Add(childFormDMTL);
             childFormDMTL.Show();
+
+            childFormDMTL.Username = this.Username;
+            childFormDMTL.currentRole = this.currentRole;
+            childFormDMTL.LoadData();
         }
 
         private void initFormBCTL()
@@ -54,6 +62,10 @@ namespace LIB2.Forms
             initForm(childFormBCTL);
             tabPageBCTL.Controls.Add(childFormBCTL);
             childFormBCTL.Show();
+
+            childFormBCTL.Username = this.Username;
+            childFormBCTL.currentRole = this.currentRole;
+            childFormBCTL.LoadData();
         }
     }
 }

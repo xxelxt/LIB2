@@ -1,4 +1,5 @@
 ﻿using LIB2.Class;
+using LIB2.Class.Types;
 using LIB2.DAL;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -11,6 +12,9 @@ namespace LIB2.Forms
 {
     public partial class frmNhap : MaterialForm
     {
+        public UserRole currentRole; 
+        public string Username { get; set; }
+
         private MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
 
         public frmNhap()
@@ -48,6 +52,10 @@ namespace LIB2.Forms
             initForm(childFormPYCBS);
             tabPagePYCBS.Controls.Add(childFormPYCBS);
             childFormPYCBS.Show();
+
+            childFormPYCBS.Username = this.Username;
+            childFormPYCBS.currentRole = this.currentRole;
+            childFormPYCBS.LoadData();
         }
 
         private void initFormPNK()
@@ -56,6 +64,10 @@ namespace LIB2.Forms
             initForm(childFormPNK);
             tabPagePNK.Controls.Add(childFormPNK);
             childFormPNK.Show();
+
+            childFormPNK.Username = this.Username;
+            childFormPNK.currentRole = this.currentRole;
+            childFormPNK.LoadData();
         }
 
         private void initFormPL()
@@ -64,6 +76,10 @@ namespace LIB2.Forms
             initForm(childFormPL);
             tabPagePL.Controls.Add(childFormPL);
             childFormPL.Show();
+
+            childFormPL.Username = this.Username;
+            childFormPL.currentRole = this.currentRole;
+            childFormPL.LoadData();
         }
     }
 }

@@ -9,12 +9,7 @@ using System.Windows.Forms;
 namespace LIB2
 {
     public partial class frmMain : MaterialForm
-    {
-        private MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
-
-        public UserRole currentRole { get; set; }
-        public string Username { get; set; }
-        
+    {   
         private frmHome childFormHome;
 
         private frmTaiLieu childFormTaiLieu;
@@ -46,6 +41,12 @@ namespace LIB2
             ConfigureMaterialSkin();
             UpdateFormTitle(materialTabControl.SelectedTab);
         }
+
+        public UserRole currentRole { get; set; }
+
+        public string Username { get; set; }
+
+        private MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
 
         public void ConfigureMaterialSkin()
         {
@@ -278,6 +279,15 @@ namespace LIB2
 
         private void UpdateChildForms()
         {
+            childFormNhap.Username = this.Username;
+            childFormNhap.currentRole = this.currentRole;
+
+            childFormKiemKe.Username = this.Username;
+            childFormKiemKe.currentRole = this.currentRole;
+
+            childFormThanhLoc.Username = this.Username;
+            childFormThanhLoc.currentRole = this.currentRole;
+
             childFormTT.Username = this.Username;
             childFormTT.currentRole = this.currentRole;
 

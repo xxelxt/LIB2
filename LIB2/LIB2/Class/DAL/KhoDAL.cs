@@ -87,5 +87,20 @@ namespace LIB2.DAL
 
             DatabaseLayer.RunSqlDel(sqlDelete, deleteParams);
         }
+
+        public static string GetTenKhoByMa(string maKho)
+        {
+            string sql = "SELECT TenKho FROM " + TableName + " WHERE MaKho = @MaKho";
+            SqlParameter[] param = { new SqlParameter("@MaKho", maKho) };
+
+            DataTable dt = DatabaseLayer.GetDataToTable(sql, param);
+
+            if (dt.Rows.Count == 0)
+            {
+                return "";
+            }
+
+            return dt.Rows[0]["TenKho"].ToString();
+        }
     }
 }

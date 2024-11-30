@@ -21,6 +21,10 @@ namespace LIB2.Forms
             InitializeComponent();
             InitializeListView();
             LoadData();
+
+            string fillComboNV = "SELECT * FROM NhanVien";
+            DatabaseLayer.FillCombo(fillComboNV, cboTenNV, "MaNV", "TenNV");
+            cboTenNV.SelectedItem = null;
         }
 
         private void InitializeListView()
@@ -411,7 +415,12 @@ namespace LIB2.Forms
 
         private void cboTenNV_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string maNV = NhanVienDAL.GetMaNVByTenNV(cboTenNV.SelectedValue.ToString());
+            if (cboTenNV.SelectedItem == null)
+            {
+                return;
+            }
+
+            string maNV = NhanVienDAL.GetMaNVByTenNV(cboTenNV.Text);
             txtMaNV.Text = maNV;
         }
     }

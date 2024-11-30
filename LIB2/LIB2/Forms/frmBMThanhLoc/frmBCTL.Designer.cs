@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cboMaPKK = new MaterialSkin.Controls.MaterialComboBox();
+            this.cboMaDMTL = new MaterialSkin.Controls.MaterialComboBox();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.btnDuyet = new MaterialSkin.Controls.MaterialButton();
             this.btnXoa = new MaterialSkin.Controls.MaterialButton();
@@ -37,53 +37,53 @@
             this.btnIn = new MaterialSkin.Controls.MaterialButton();
             this.btnHuy = new MaterialSkin.Controls.MaterialButton();
             this.btnLuu = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
+            this.btnThem = new MaterialSkin.Controls.MaterialButton();
             this.txtTimKiem = new MaterialSkin.Controls.MaterialTextBox2();
             this.btnTimKiem = new MaterialSkin.Controls.MaterialButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtMaNVDuyet = new MaterialSkin.Controls.MaterialTextBox2();
-            this.txtTGKT = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtMaBCTL = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.txtTGBD = new MaterialSkin.Controls.MaterialMaskedTextBox();
-            this.txtMaNVLap = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox21 = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox22 = new MaterialSkin.Controls.MaterialTextBox2();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.materialTextBox23 = new MaterialSkin.Controls.MaterialTextBox2();
+            this.txtTongTien = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtSoTLThanhLoc = new MaterialSkin.Controls.MaterialTextBox2();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtSoTLCDMD = new MaterialSkin.Controls.MaterialTextBox2();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtNgayLap = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtMaNVLap = new MaterialSkin.Controls.MaterialTextBox2();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtMaBCTL = new MaterialSkin.Controls.MaterialTextBox2();
+            this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.txtNgayDuyet = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.txtMaNVDuyet = new MaterialSkin.Controls.MaterialTextBox2();
+            this.materialLabel13 = new MaterialSkin.Controls.MaterialLabel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // cboMaPKK
+            // cboMaDMTL
             // 
-            this.cboMaPKK.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.cboMaDMTL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.cboMaPKK.AutoResize = false;
-            this.cboMaPKK.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboMaPKK.Depth = 0;
-            this.cboMaPKK.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboMaPKK.DropDownHeight = 174;
-            this.cboMaPKK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboMaPKK.DropDownWidth = 121;
-            this.cboMaPKK.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cboMaPKK.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboMaPKK.FormattingEnabled = true;
-            this.cboMaPKK.IntegralHeight = false;
-            this.cboMaPKK.ItemHeight = 43;
-            this.cboMaPKK.Location = new System.Drawing.Point(116, 96);
-            this.cboMaPKK.MaxDropDownItems = 4;
-            this.cboMaPKK.MinimumSize = new System.Drawing.Size(150, 0);
-            this.cboMaPKK.MouseState = MaterialSkin.MouseState.OUT;
-            this.cboMaPKK.Name = "cboMaPKK";
-            this.cboMaPKK.Size = new System.Drawing.Size(150, 49);
-            this.cboMaPKK.StartIndex = 0;
-            this.cboMaPKK.TabIndex = 153;
+            this.cboMaDMTL.AutoResize = false;
+            this.cboMaDMTL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cboMaDMTL.Depth = 0;
+            this.cboMaDMTL.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboMaDMTL.DropDownHeight = 174;
+            this.cboMaDMTL.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMaDMTL.DropDownWidth = 121;
+            this.cboMaDMTL.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cboMaDMTL.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cboMaDMTL.FormattingEnabled = true;
+            this.cboMaDMTL.IntegralHeight = false;
+            this.cboMaDMTL.ItemHeight = 43;
+            this.cboMaDMTL.Location = new System.Drawing.Point(116, 96);
+            this.cboMaDMTL.MaxDropDownItems = 4;
+            this.cboMaDMTL.MinimumSize = new System.Drawing.Size(150, 0);
+            this.cboMaDMTL.MouseState = MaterialSkin.MouseState.OUT;
+            this.cboMaDMTL.Name = "cboMaDMTL";
+            this.cboMaDMTL.Size = new System.Drawing.Size(150, 49);
+            this.cboMaDMTL.StartIndex = 0;
+            this.cboMaDMTL.TabIndex = 153;
             // 
             // materialLabel4
             // 
@@ -122,6 +122,7 @@
             this.btnDuyet.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnDuyet.UseAccentColor = false;
             this.btnDuyet.UseVisualStyleBackColor = true;
+            this.btnDuyet.Click += new System.EventHandler(this.btnDuyet_Click);
             // 
             // btnXoa
             // 
@@ -146,6 +147,7 @@
             this.btnXoa.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnXoa.UseAccentColor = false;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // listViewBCTL
             // 
@@ -170,6 +172,7 @@
             this.listViewBCTL.TabIndex = 229;
             this.listViewBCTL.UseCompatibleStateImageBehavior = false;
             this.listViewBCTL.View = System.Windows.Forms.View.Details;
+            this.listViewBCTL.SelectedIndexChanged += new System.EventHandler(this.listViewBCTL_SelectedIndexChanged);
             // 
             // cboTimKiem
             // 
@@ -219,6 +222,7 @@
             this.btnIn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnIn.UseAccentColor = false;
             this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnHuy
             // 
@@ -243,6 +247,7 @@
             this.btnHuy.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnHuy.UseAccentColor = false;
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -267,30 +272,32 @@
             this.btnLuu.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLuu.UseAccentColor = false;
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // materialButton4
+            // btnThem
             // 
-            this.materialButton4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.materialButton4.AutoSize = false;
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(214, 755);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton4.MaximumSize = new System.Drawing.Size(0, 36);
-            this.materialButton4.MinimumSize = new System.Drawing.Size(80, 36);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(80, 36);
-            this.materialButton4.TabIndex = 223;
-            this.materialButton4.Text = "Thêm";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseVisualStyleBackColor = true;
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnThem.AutoSize = false;
+            this.btnThem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnThem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnThem.Depth = 0;
+            this.btnThem.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.HighEmphasis = true;
+            this.btnThem.Icon = null;
+            this.btnThem.Location = new System.Drawing.Point(214, 755);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnThem.MaximumSize = new System.Drawing.Size(0, 36);
+            this.btnThem.MinimumSize = new System.Drawing.Size(80, 36);
+            this.btnThem.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnThem.Name = "btnThem";
+            this.btnThem.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnThem.Size = new System.Drawing.Size(80, 36);
+            this.btnThem.TabIndex = 223;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnThem.UseAccentColor = false;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtTimKiem
             // 
@@ -324,6 +331,9 @@
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTimKiem.TrailingIcon = null;
             this.txtTimKiem.UseSystemPasswordChar = false;
+            this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter);
+            this.txtTimKiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyDown);
+            this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
             // 
             // btnTimKiem
             // 
@@ -350,27 +360,28 @@
             this.btnTimKiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTimKiem.UseAccentColor = false;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.materialTextBox23);
+            this.groupBox1.Controls.Add(this.txtTongTien);
             this.groupBox1.Controls.Add(this.materialLabel7);
-            this.groupBox1.Controls.Add(this.materialTextBox22);
+            this.groupBox1.Controls.Add(this.txtSoTLThanhLoc);
             this.groupBox1.Controls.Add(this.materialLabel3);
-            this.groupBox1.Controls.Add(this.materialTextBox21);
+            this.groupBox1.Controls.Add(this.txtSoTLCDMD);
             this.groupBox1.Controls.Add(this.materialLabel2);
-            this.groupBox1.Controls.Add(this.txtTGBD);
+            this.groupBox1.Controls.Add(this.txtNgayLap);
             this.groupBox1.Controls.Add(this.materialLabel4);
-            this.groupBox1.Controls.Add(this.cboMaPKK);
+            this.groupBox1.Controls.Add(this.cboMaDMTL);
             this.groupBox1.Controls.Add(this.materialLabel6);
             this.groupBox1.Controls.Add(this.materialLabel9);
             this.groupBox1.Controls.Add(this.txtMaNVLap);
             this.groupBox1.Controls.Add(this.materialLabel1);
             this.groupBox1.Controls.Add(this.txtMaBCTL);
             this.groupBox1.Controls.Add(this.materialLabel5);
-            this.groupBox1.Controls.Add(this.txtTGKT);
+            this.groupBox1.Controls.Add(this.txtNgayDuyet);
             this.groupBox1.Controls.Add(this.txtMaNVDuyet);
             this.groupBox1.Controls.Add(this.materialLabel13);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -380,203 +391,222 @@
             this.groupBox1.TabIndex = 218;
             this.groupBox1.TabStop = false;
             // 
-            // materialLabel13
+            // txtTongTien
             // 
-            this.materialLabel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialLabel13.AutoSize = true;
-            this.materialLabel13.Depth = 0;
-            this.materialLabel13.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel13.Location = new System.Drawing.Point(715, 112);
-            this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel13.Name = "materialLabel13";
-            this.materialLabel13.Size = new System.Drawing.Size(85, 19);
-            this.materialLabel13.TabIndex = 160;
-            this.materialLabel13.Text = "Ngày duyệt:";
-            // 
-            // txtMaNVDuyet
-            // 
-            this.txtMaNVDuyet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtMaNVDuyet.AnimateReadOnly = true;
-            this.txtMaNVDuyet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtMaNVDuyet.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtMaNVDuyet.Depth = 0;
-            this.txtMaNVDuyet.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNVDuyet.HideSelection = true;
-            this.txtMaNVDuyet.LeadingIcon = null;
-            this.txtMaNVDuyet.Location = new System.Drawing.Point(412, 97);
-            this.txtMaNVDuyet.MaximumSize = new System.Drawing.Size(0, 40);
-            this.txtMaNVDuyet.MaxLength = 32767;
-            this.txtMaNVDuyet.MinimumSize = new System.Drawing.Size(0, 48);
-            this.txtMaNVDuyet.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtMaNVDuyet.Name = "txtMaNVDuyet";
-            this.txtMaNVDuyet.PasswordChar = '\0';
-            this.txtMaNVDuyet.PrefixSuffixText = null;
-            this.txtMaNVDuyet.ReadOnly = false;
-            this.txtMaNVDuyet.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtMaNVDuyet.SelectedText = "";
-            this.txtMaNVDuyet.SelectionLength = 0;
-            this.txtMaNVDuyet.SelectionStart = 0;
-            this.txtMaNVDuyet.ShortcutsEnabled = true;
-            this.txtMaNVDuyet.Size = new System.Drawing.Size(283, 48);
-            this.txtMaNVDuyet.TabIndex = 152;
-            this.txtMaNVDuyet.TabStop = false;
-            this.txtMaNVDuyet.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtMaNVDuyet.TrailingIcon = null;
-            this.txtMaNVDuyet.UseSystemPasswordChar = false;
-            // 
-            // txtTGKT
-            // 
-            this.txtTGKT.AllowPromptAsInput = true;
-            this.txtTGKT.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtTongTien.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTGKT.AnimateReadOnly = false;
-            this.txtTGKT.AsciiOnly = false;
-            this.txtTGKT.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtTGKT.BeepOnError = false;
-            this.txtTGKT.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txtTGKT.Depth = 0;
-            this.txtTGKT.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtTGKT.HidePromptOnLeave = false;
-            this.txtTGKT.HideSelection = true;
-            this.txtTGKT.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.txtTGKT.LeadingIcon = null;
-            this.txtTGKT.Location = new System.Drawing.Point(807, 96);
-            this.txtTGKT.Mask = "00/00/0000";
-            this.txtTGKT.MaximumSize = new System.Drawing.Size(0, 40);
-            this.txtTGKT.MaxLength = 32767;
-            this.txtTGKT.MinimumSize = new System.Drawing.Size(0, 48);
-            this.txtTGKT.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtTGKT.Name = "txtTGKT";
-            this.txtTGKT.PasswordChar = '\0';
-            this.txtTGKT.PrefixSuffixText = null;
-            this.txtTGKT.PromptChar = '_';
-            this.txtTGKT.ReadOnly = false;
-            this.txtTGKT.RejectInputOnFirstFailure = false;
-            this.txtTGKT.ResetOnPrompt = true;
-            this.txtTGKT.ResetOnSpace = true;
-            this.txtTGKT.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTGKT.SelectedText = "";
-            this.txtTGKT.SelectionLength = 0;
-            this.txtTGKT.SelectionStart = 0;
-            this.txtTGKT.ShortcutsEnabled = true;
-            this.txtTGKT.Size = new System.Drawing.Size(141, 48);
-            this.txtTGKT.SkipLiterals = true;
-            this.txtTGKT.TabIndex = 159;
-            this.txtTGKT.TabStop = false;
-            this.txtTGKT.Text = "  /  /";
-            this.txtTGKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtTGKT.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txtTGKT.TrailingIcon = null;
-            this.txtTGKT.UseSystemPasswordChar = false;
-            this.txtTGKT.ValidatingType = null;
+            this.txtTongTien.AnimateReadOnly = true;
+            this.txtTongTien.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtTongTien.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtTongTien.Depth = 0;
+            this.txtTongTien.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongTien.HideSelection = true;
+            this.txtTongTien.LeadingIcon = null;
+            this.txtTongTien.Location = new System.Drawing.Point(807, 170);
+            this.txtTongTien.MaximumSize = new System.Drawing.Size(0, 40);
+            this.txtTongTien.MaxLength = 32767;
+            this.txtTongTien.MinimumSize = new System.Drawing.Size(0, 48);
+            this.txtTongTien.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtTongTien.Name = "txtTongTien";
+            this.txtTongTien.PasswordChar = '\0';
+            this.txtTongTien.PrefixSuffixText = null;
+            this.txtTongTien.ReadOnly = false;
+            this.txtTongTien.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtTongTien.SelectedText = "";
+            this.txtTongTien.SelectionLength = 0;
+            this.txtTongTien.SelectionStart = 0;
+            this.txtTongTien.ShortcutsEnabled = true;
+            this.txtTongTien.Size = new System.Drawing.Size(141, 48);
+            this.txtTongTien.TabIndex = 166;
+            this.txtTongTien.TabStop = false;
+            this.txtTongTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtTongTien.TrailingIcon = null;
+            this.txtTongTien.UseSystemPasswordChar = false;
+            this.txtTongTien.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTongTien_KeyPress);
             // 
-            // materialLabel5
+            // materialLabel7
             // 
-            this.materialLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.materialLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialLabel5.AutoSize = true;
-            this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel5.Location = new System.Drawing.Point(304, 44);
-            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(102, 19);
-            this.materialLabel5.TabIndex = 97;
-            this.materialLabel5.Text = "Nhân viên lập:";
+            this.materialLabel7.AutoSize = true;
+            this.materialLabel7.Depth = 0;
+            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel7.Location = new System.Drawing.Point(658, 184);
+            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel7.Name = "materialLabel7";
+            this.materialLabel7.Size = new System.Drawing.Size(142, 19);
+            this.materialLabel7.TabIndex = 165;
+            this.materialLabel7.Text = "Tổng tiền thanh lọc:";
             // 
-            // txtMaBCTL
+            // txtSoTLThanhLoc
             // 
-            this.txtMaBCTL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtSoTLThanhLoc.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtMaBCTL.AnimateReadOnly = true;
-            this.txtMaBCTL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtMaBCTL.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtMaBCTL.Depth = 0;
-            this.txtMaBCTL.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaBCTL.HideSelection = true;
-            this.txtMaBCTL.LeadingIcon = null;
-            this.txtMaBCTL.Location = new System.Drawing.Point(116, 29);
-            this.txtMaBCTL.MaximumSize = new System.Drawing.Size(0, 40);
-            this.txtMaBCTL.MaxLength = 32767;
-            this.txtMaBCTL.MinimumSize = new System.Drawing.Size(0, 48);
-            this.txtMaBCTL.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtMaBCTL.Name = "txtMaBCTL";
-            this.txtMaBCTL.PasswordChar = '\0';
-            this.txtMaBCTL.PrefixSuffixText = null;
-            this.txtMaBCTL.ReadOnly = false;
-            this.txtMaBCTL.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtMaBCTL.SelectedText = "";
-            this.txtMaBCTL.SelectionLength = 0;
-            this.txtMaBCTL.SelectionStart = 0;
-            this.txtMaBCTL.ShortcutsEnabled = true;
-            this.txtMaBCTL.Size = new System.Drawing.Size(150, 48);
-            this.txtMaBCTL.TabIndex = 84;
-            this.txtMaBCTL.TabStop = false;
-            this.txtMaBCTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtMaBCTL.TrailingIcon = null;
-            this.txtMaBCTL.UseSystemPasswordChar = false;
+            this.txtSoTLThanhLoc.AnimateReadOnly = true;
+            this.txtSoTLThanhLoc.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtSoTLThanhLoc.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtSoTLThanhLoc.Depth = 0;
+            this.txtSoTLThanhLoc.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTLThanhLoc.HideSelection = true;
+            this.txtSoTLThanhLoc.LeadingIcon = null;
+            this.txtSoTLThanhLoc.Location = new System.Drawing.Point(516, 170);
+            this.txtSoTLThanhLoc.MaximumSize = new System.Drawing.Size(0, 40);
+            this.txtSoTLThanhLoc.MaxLength = 32767;
+            this.txtSoTLThanhLoc.MinimumSize = new System.Drawing.Size(0, 48);
+            this.txtSoTLThanhLoc.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtSoTLThanhLoc.Name = "txtSoTLThanhLoc";
+            this.txtSoTLThanhLoc.PasswordChar = '\0';
+            this.txtSoTLThanhLoc.PrefixSuffixText = null;
+            this.txtSoTLThanhLoc.ReadOnly = false;
+            this.txtSoTLThanhLoc.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSoTLThanhLoc.SelectedText = "";
+            this.txtSoTLThanhLoc.SelectionLength = 0;
+            this.txtSoTLThanhLoc.SelectionStart = 0;
+            this.txtSoTLThanhLoc.ShortcutsEnabled = true;
+            this.txtSoTLThanhLoc.Size = new System.Drawing.Size(107, 48);
+            this.txtSoTLThanhLoc.TabIndex = 164;
+            this.txtSoTLThanhLoc.TabStop = false;
+            this.txtSoTLThanhLoc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSoTLThanhLoc.TrailingIcon = null;
+            this.txtSoTLThanhLoc.UseSystemPasswordChar = false;
+            this.txtSoTLThanhLoc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoTLThanhLoc_KeyPress);
             // 
-            // materialLabel1
+            // materialLabel3
             // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.Location = new System.Drawing.Point(37, 44);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(71, 19);
-            this.materialLabel1.TabIndex = 83;
-            this.materialLabel1.Text = "Mã BCTL:";
+            this.materialLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel3.Location = new System.Drawing.Point(393, 184);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(117, 19);
+            this.materialLabel3.TabIndex = 163;
+            this.materialLabel3.Text = "Số TL thanh lọc:";
             // 
-            // txtTGBD
+            // txtSoTLCDMD
             // 
-            this.txtTGBD.AllowPromptAsInput = true;
-            this.txtTGBD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtSoTLCDMD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtSoTLCDMD.AnimateReadOnly = true;
+            this.txtSoTLCDMD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtSoTLCDMD.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtSoTLCDMD.Depth = 0;
+            this.txtSoTLCDMD.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTLCDMD.HideSelection = true;
+            this.txtSoTLCDMD.LeadingIcon = null;
+            this.txtSoTLCDMD.Location = new System.Drawing.Point(240, 170);
+            this.txtSoTLCDMD.MaximumSize = new System.Drawing.Size(0, 40);
+            this.txtSoTLCDMD.MaxLength = 32767;
+            this.txtSoTLCDMD.MinimumSize = new System.Drawing.Size(0, 48);
+            this.txtSoTLCDMD.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtSoTLCDMD.Name = "txtSoTLCDMD";
+            this.txtSoTLCDMD.PasswordChar = '\0';
+            this.txtSoTLCDMD.PrefixSuffixText = null;
+            this.txtSoTLCDMD.ReadOnly = false;
+            this.txtSoTLCDMD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSoTLCDMD.SelectedText = "";
+            this.txtSoTLCDMD.SelectionLength = 0;
+            this.txtSoTLCDMD.SelectionStart = 0;
+            this.txtSoTLCDMD.ShortcutsEnabled = true;
+            this.txtSoTLCDMD.Size = new System.Drawing.Size(107, 48);
+            this.txtSoTLCDMD.TabIndex = 162;
+            this.txtSoTLCDMD.TabStop = false;
+            this.txtSoTLCDMD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtSoTLCDMD.TrailingIcon = null;
+            this.txtSoTLCDMD.UseSystemPasswordChar = false;
+            this.txtSoTLCDMD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoTLCDMD_KeyPress);
+            // 
+            // materialLabel2
+            // 
+            this.materialLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.Location = new System.Drawing.Point(33, 184);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(199, 19);
+            this.materialLabel2.TabIndex = 161;
+            this.materialLabel2.Text = "Số TL chuyển đổi mục đích:";
+            // 
+            // txtNgayLap
+            // 
+            this.txtNgayLap.AllowPromptAsInput = true;
+            this.txtNgayLap.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTGBD.AnimateReadOnly = false;
-            this.txtTGBD.AsciiOnly = false;
-            this.txtTGBD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtTGBD.BeepOnError = false;
-            this.txtTGBD.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txtTGBD.Depth = 0;
-            this.txtTGBD.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtTGBD.HidePromptOnLeave = false;
-            this.txtTGBD.HideSelection = true;
-            this.txtTGBD.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
-            this.txtTGBD.LeadingIcon = null;
-            this.txtTGBD.Location = new System.Drawing.Point(807, 29);
-            this.txtTGBD.Mask = "00/00/0000";
-            this.txtTGBD.MaximumSize = new System.Drawing.Size(0, 40);
-            this.txtTGBD.MaxLength = 32767;
-            this.txtTGBD.MinimumSize = new System.Drawing.Size(0, 48);
-            this.txtTGBD.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtTGBD.Name = "txtTGBD";
-            this.txtTGBD.PasswordChar = '\0';
-            this.txtTGBD.PrefixSuffixText = null;
-            this.txtTGBD.PromptChar = '_';
-            this.txtTGBD.ReadOnly = false;
-            this.txtTGBD.RejectInputOnFirstFailure = false;
-            this.txtTGBD.ResetOnPrompt = true;
-            this.txtTGBD.ResetOnSpace = true;
-            this.txtTGBD.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTGBD.SelectedText = "";
-            this.txtTGBD.SelectionLength = 0;
-            this.txtTGBD.SelectionStart = 0;
-            this.txtTGBD.ShortcutsEnabled = true;
-            this.txtTGBD.Size = new System.Drawing.Size(141, 48);
-            this.txtTGBD.SkipLiterals = true;
-            this.txtTGBD.TabIndex = 145;
-            this.txtTGBD.TabStop = false;
-            this.txtTGBD.Text = "  /  /";
-            this.txtTGBD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtTGBD.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
-            this.txtTGBD.TrailingIcon = null;
-            this.txtTGBD.UseSystemPasswordChar = false;
-            this.txtTGBD.ValidatingType = null;
+            this.txtNgayLap.AnimateReadOnly = false;
+            this.txtNgayLap.AsciiOnly = false;
+            this.txtNgayLap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtNgayLap.BeepOnError = false;
+            this.txtNgayLap.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtNgayLap.Depth = 0;
+            this.txtNgayLap.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNgayLap.HidePromptOnLeave = false;
+            this.txtNgayLap.HideSelection = true;
+            this.txtNgayLap.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.txtNgayLap.LeadingIcon = null;
+            this.txtNgayLap.Location = new System.Drawing.Point(807, 29);
+            this.txtNgayLap.Mask = "00/00/0000";
+            this.txtNgayLap.MaximumSize = new System.Drawing.Size(0, 40);
+            this.txtNgayLap.MaxLength = 32767;
+            this.txtNgayLap.MinimumSize = new System.Drawing.Size(0, 48);
+            this.txtNgayLap.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtNgayLap.Name = "txtNgayLap";
+            this.txtNgayLap.PasswordChar = '\0';
+            this.txtNgayLap.PrefixSuffixText = null;
+            this.txtNgayLap.PromptChar = '_';
+            this.txtNgayLap.ReadOnly = false;
+            this.txtNgayLap.RejectInputOnFirstFailure = false;
+            this.txtNgayLap.ResetOnPrompt = true;
+            this.txtNgayLap.ResetOnSpace = true;
+            this.txtNgayLap.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtNgayLap.SelectedText = "";
+            this.txtNgayLap.SelectionLength = 0;
+            this.txtNgayLap.SelectionStart = 0;
+            this.txtNgayLap.ShortcutsEnabled = true;
+            this.txtNgayLap.Size = new System.Drawing.Size(141, 48);
+            this.txtNgayLap.SkipLiterals = true;
+            this.txtNgayLap.TabIndex = 145;
+            this.txtNgayLap.TabStop = false;
+            this.txtNgayLap.Text = "  /  /";
+            this.txtNgayLap.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNgayLap.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtNgayLap.TrailingIcon = null;
+            this.txtNgayLap.UseSystemPasswordChar = false;
+            this.txtNgayLap.ValidatingType = null;
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialLabel6.AutoSize = true;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel6.Location = new System.Drawing.Point(732, 44);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(68, 19);
+            this.materialLabel6.TabIndex = 147;
+            this.materialLabel6.Text = "Ngày lập:";
+            // 
+            // materialLabel9
+            // 
+            this.materialLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialLabel9.AutoSize = true;
+            this.materialLabel9.Depth = 0;
+            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel9.Location = new System.Drawing.Point(32, 112);
+            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel9.Name = "materialLabel9";
+            this.materialLabel9.Size = new System.Drawing.Size(76, 19);
+            this.materialLabel9.TabIndex = 154;
+            this.materialLabel9.Text = "Mã DMTL:";
             // 
             // txtMaNVLap
             // 
@@ -610,172 +640,156 @@
             this.txtMaNVLap.TrailingIcon = null;
             this.txtMaNVLap.UseSystemPasswordChar = false;
             // 
-            // materialLabel9
+            // materialLabel1
             // 
-            this.materialLabel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.Location = new System.Drawing.Point(37, 44);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(71, 19);
+            this.materialLabel1.TabIndex = 83;
+            this.materialLabel1.Text = "Mã BCTL:";
+            // 
+            // txtMaBCTL
+            // 
+            this.txtMaBCTL.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialLabel9.AutoSize = true;
-            this.materialLabel9.Depth = 0;
-            this.materialLabel9.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel9.Location = new System.Drawing.Point(33, 112);
-            this.materialLabel9.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel9.Name = "materialLabel9";
-            this.materialLabel9.Size = new System.Drawing.Size(76, 19);
-            this.materialLabel9.TabIndex = 154;
-            this.materialLabel9.Text = "Mã DMTL:";
+            this.txtMaBCTL.AnimateReadOnly = true;
+            this.txtMaBCTL.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtMaBCTL.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtMaBCTL.Depth = 0;
+            this.txtMaBCTL.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaBCTL.HideSelection = true;
+            this.txtMaBCTL.LeadingIcon = null;
+            this.txtMaBCTL.Location = new System.Drawing.Point(116, 29);
+            this.txtMaBCTL.MaximumSize = new System.Drawing.Size(0, 40);
+            this.txtMaBCTL.MaxLength = 32767;
+            this.txtMaBCTL.MinimumSize = new System.Drawing.Size(0, 48);
+            this.txtMaBCTL.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtMaBCTL.Name = "txtMaBCTL";
+            this.txtMaBCTL.PasswordChar = '\0';
+            this.txtMaBCTL.PrefixSuffixText = null;
+            this.txtMaBCTL.ReadOnly = false;
+            this.txtMaBCTL.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtMaBCTL.SelectedText = "";
+            this.txtMaBCTL.SelectionLength = 0;
+            this.txtMaBCTL.SelectionStart = 0;
+            this.txtMaBCTL.ShortcutsEnabled = true;
+            this.txtMaBCTL.Size = new System.Drawing.Size(150, 48);
+            this.txtMaBCTL.TabIndex = 84;
+            this.txtMaBCTL.TabStop = false;
+            this.txtMaBCTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMaBCTL.TrailingIcon = null;
+            this.txtMaBCTL.UseSystemPasswordChar = false;
             // 
-            // materialLabel6
+            // materialLabel5
             // 
-            this.materialLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.materialLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel6.Location = new System.Drawing.Point(732, 44);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(68, 19);
-            this.materialLabel6.TabIndex = 147;
-            this.materialLabel6.Text = "Ngày lập:";
+            this.materialLabel5.AutoSize = true;
+            this.materialLabel5.Depth = 0;
+            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel5.Location = new System.Drawing.Point(304, 44);
+            this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel5.Name = "materialLabel5";
+            this.materialLabel5.Size = new System.Drawing.Size(102, 19);
+            this.materialLabel5.TabIndex = 97;
+            this.materialLabel5.Text = "Nhân viên lập:";
             // 
-            // materialTextBox21
+            // txtNgayDuyet
             // 
-            this.materialTextBox21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialTextBox21.AnimateReadOnly = true;
-            this.materialTextBox21.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialTextBox21.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.materialTextBox21.Depth = 0;
-            this.materialTextBox21.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialTextBox21.HideSelection = true;
-            this.materialTextBox21.LeadingIcon = null;
-            this.materialTextBox21.Location = new System.Drawing.Point(240, 170);
-            this.materialTextBox21.MaximumSize = new System.Drawing.Size(0, 40);
-            this.materialTextBox21.MaxLength = 32767;
-            this.materialTextBox21.MinimumSize = new System.Drawing.Size(0, 48);
-            this.materialTextBox21.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox21.Name = "materialTextBox21";
-            this.materialTextBox21.PasswordChar = '\0';
-            this.materialTextBox21.PrefixSuffixText = null;
-            this.materialTextBox21.ReadOnly = false;
-            this.materialTextBox21.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialTextBox21.SelectedText = "";
-            this.materialTextBox21.SelectionLength = 0;
-            this.materialTextBox21.SelectionStart = 0;
-            this.materialTextBox21.ShortcutsEnabled = true;
-            this.materialTextBox21.Size = new System.Drawing.Size(107, 48);
-            this.materialTextBox21.TabIndex = 162;
-            this.materialTextBox21.TabStop = false;
-            this.materialTextBox21.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialTextBox21.TrailingIcon = null;
-            this.materialTextBox21.UseSystemPasswordChar = false;
-            // 
-            // materialLabel2
-            // 
-            this.materialLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialLabel2.AutoSize = true;
-            this.materialLabel2.Depth = 0;
-            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel2.Location = new System.Drawing.Point(33, 184);
-            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.Size = new System.Drawing.Size(199, 19);
-            this.materialLabel2.TabIndex = 161;
-            this.materialLabel2.Text = "Số TL chuyển đổi mục đích:";
-            // 
-            // materialTextBox22
-            // 
-            this.materialTextBox22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialTextBox22.AnimateReadOnly = true;
-            this.materialTextBox22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialTextBox22.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.materialTextBox22.Depth = 0;
-            this.materialTextBox22.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialTextBox22.HideSelection = true;
-            this.materialTextBox22.LeadingIcon = null;
-            this.materialTextBox22.Location = new System.Drawing.Point(516, 170);
-            this.materialTextBox22.MaximumSize = new System.Drawing.Size(0, 40);
-            this.materialTextBox22.MaxLength = 32767;
-            this.materialTextBox22.MinimumSize = new System.Drawing.Size(0, 48);
-            this.materialTextBox22.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox22.Name = "materialTextBox22";
-            this.materialTextBox22.PasswordChar = '\0';
-            this.materialTextBox22.PrefixSuffixText = null;
-            this.materialTextBox22.ReadOnly = false;
-            this.materialTextBox22.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialTextBox22.SelectedText = "";
-            this.materialTextBox22.SelectionLength = 0;
-            this.materialTextBox22.SelectionStart = 0;
-            this.materialTextBox22.ShortcutsEnabled = true;
-            this.materialTextBox22.Size = new System.Drawing.Size(107, 48);
-            this.materialTextBox22.TabIndex = 164;
-            this.materialTextBox22.TabStop = false;
-            this.materialTextBox22.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialTextBox22.TrailingIcon = null;
-            this.materialTextBox22.UseSystemPasswordChar = false;
-            // 
-            // materialLabel3
-            // 
-            this.materialLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel3.Location = new System.Drawing.Point(393, 184);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(117, 19);
-            this.materialLabel3.TabIndex = 163;
-            this.materialLabel3.Text = "Số TL thanh lọc:";
-            // 
-            // materialTextBox23
-            // 
-            this.materialTextBox23.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtNgayDuyet.AllowPromptAsInput = true;
+            this.txtNgayDuyet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialTextBox23.AnimateReadOnly = true;
-            this.materialTextBox23.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.materialTextBox23.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.materialTextBox23.Depth = 0;
-            this.materialTextBox23.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialTextBox23.HideSelection = true;
-            this.materialTextBox23.LeadingIcon = null;
-            this.materialTextBox23.Location = new System.Drawing.Point(807, 170);
-            this.materialTextBox23.MaximumSize = new System.Drawing.Size(0, 40);
-            this.materialTextBox23.MaxLength = 32767;
-            this.materialTextBox23.MinimumSize = new System.Drawing.Size(0, 48);
-            this.materialTextBox23.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox23.Name = "materialTextBox23";
-            this.materialTextBox23.PasswordChar = '\0';
-            this.materialTextBox23.PrefixSuffixText = null;
-            this.materialTextBox23.ReadOnly = false;
-            this.materialTextBox23.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.materialTextBox23.SelectedText = "";
-            this.materialTextBox23.SelectionLength = 0;
-            this.materialTextBox23.SelectionStart = 0;
-            this.materialTextBox23.ShortcutsEnabled = true;
-            this.materialTextBox23.Size = new System.Drawing.Size(141, 48);
-            this.materialTextBox23.TabIndex = 166;
-            this.materialTextBox23.TabStop = false;
-            this.materialTextBox23.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.materialTextBox23.TrailingIcon = null;
-            this.materialTextBox23.UseSystemPasswordChar = false;
+            this.txtNgayDuyet.AnimateReadOnly = false;
+            this.txtNgayDuyet.AsciiOnly = false;
+            this.txtNgayDuyet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtNgayDuyet.BeepOnError = false;
+            this.txtNgayDuyet.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtNgayDuyet.Depth = 0;
+            this.txtNgayDuyet.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtNgayDuyet.HidePromptOnLeave = false;
+            this.txtNgayDuyet.HideSelection = true;
+            this.txtNgayDuyet.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.txtNgayDuyet.LeadingIcon = null;
+            this.txtNgayDuyet.Location = new System.Drawing.Point(807, 96);
+            this.txtNgayDuyet.Mask = "00/00/0000";
+            this.txtNgayDuyet.MaximumSize = new System.Drawing.Size(0, 40);
+            this.txtNgayDuyet.MaxLength = 32767;
+            this.txtNgayDuyet.MinimumSize = new System.Drawing.Size(0, 48);
+            this.txtNgayDuyet.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtNgayDuyet.Name = "txtNgayDuyet";
+            this.txtNgayDuyet.PasswordChar = '\0';
+            this.txtNgayDuyet.PrefixSuffixText = null;
+            this.txtNgayDuyet.PromptChar = '_';
+            this.txtNgayDuyet.ReadOnly = false;
+            this.txtNgayDuyet.RejectInputOnFirstFailure = false;
+            this.txtNgayDuyet.ResetOnPrompt = true;
+            this.txtNgayDuyet.ResetOnSpace = true;
+            this.txtNgayDuyet.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtNgayDuyet.SelectedText = "";
+            this.txtNgayDuyet.SelectionLength = 0;
+            this.txtNgayDuyet.SelectionStart = 0;
+            this.txtNgayDuyet.ShortcutsEnabled = true;
+            this.txtNgayDuyet.Size = new System.Drawing.Size(141, 48);
+            this.txtNgayDuyet.SkipLiterals = true;
+            this.txtNgayDuyet.TabIndex = 159;
+            this.txtNgayDuyet.TabStop = false;
+            this.txtNgayDuyet.Text = "  /  /";
+            this.txtNgayDuyet.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtNgayDuyet.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtNgayDuyet.TrailingIcon = null;
+            this.txtNgayDuyet.UseSystemPasswordChar = false;
+            this.txtNgayDuyet.ValidatingType = null;
             // 
-            // materialLabel7
+            // txtMaNVDuyet
             // 
-            this.materialLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.txtMaNVDuyet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialLabel7.AutoSize = true;
-            this.materialLabel7.Depth = 0;
-            this.materialLabel7.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel7.Location = new System.Drawing.Point(658, 184);
-            this.materialLabel7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel7.Name = "materialLabel7";
-            this.materialLabel7.Size = new System.Drawing.Size(142, 19);
-            this.materialLabel7.TabIndex = 165;
-            this.materialLabel7.Text = "Tổng tiền thanh lọc:";
+            this.txtMaNVDuyet.AnimateReadOnly = true;
+            this.txtMaNVDuyet.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtMaNVDuyet.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtMaNVDuyet.Depth = 0;
+            this.txtMaNVDuyet.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNVDuyet.HideSelection = true;
+            this.txtMaNVDuyet.LeadingIcon = null;
+            this.txtMaNVDuyet.Location = new System.Drawing.Point(412, 97);
+            this.txtMaNVDuyet.MaximumSize = new System.Drawing.Size(0, 40);
+            this.txtMaNVDuyet.MaxLength = 32767;
+            this.txtMaNVDuyet.MinimumSize = new System.Drawing.Size(0, 48);
+            this.txtMaNVDuyet.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtMaNVDuyet.Name = "txtMaNVDuyet";
+            this.txtMaNVDuyet.PasswordChar = '\0';
+            this.txtMaNVDuyet.PrefixSuffixText = null;
+            this.txtMaNVDuyet.ReadOnly = false;
+            this.txtMaNVDuyet.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtMaNVDuyet.SelectedText = "";
+            this.txtMaNVDuyet.SelectionLength = 0;
+            this.txtMaNVDuyet.SelectionStart = 0;
+            this.txtMaNVDuyet.ShortcutsEnabled = true;
+            this.txtMaNVDuyet.Size = new System.Drawing.Size(283, 48);
+            this.txtMaNVDuyet.TabIndex = 152;
+            this.txtMaNVDuyet.TabStop = false;
+            this.txtMaNVDuyet.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMaNVDuyet.TrailingIcon = null;
+            this.txtMaNVDuyet.UseSystemPasswordChar = false;
+            // 
+            // materialLabel13
+            // 
+            this.materialLabel13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialLabel13.AutoSize = true;
+            this.materialLabel13.Depth = 0;
+            this.materialLabel13.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel13.Location = new System.Drawing.Point(715, 112);
+            this.materialLabel13.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel13.Name = "materialLabel13";
+            this.materialLabel13.Size = new System.Drawing.Size(85, 19);
+            this.materialLabel13.TabIndex = 160;
+            this.materialLabel13.Text = "Ngày duyệt:";
             // 
             // frmBCTL
             // 
@@ -790,7 +804,7 @@
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.materialButton4);
+            this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.groupBox1);
@@ -798,6 +812,7 @@
             this.Name = "frmBCTL";
             this.Padding = new System.Windows.Forms.Padding(3, 80, 6, 6);
             this.Text = "frmBCTL";
+            this.Load += new System.EventHandler(this.frmBCTL_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -805,7 +820,7 @@
         }
 
         #endregion
-        private MaterialSkin.Controls.MaterialComboBox cboMaPKK;
+        private MaterialSkin.Controls.MaterialComboBox cboMaDMTL;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialButton btnDuyet;
         private MaterialSkin.Controls.MaterialButton btnXoa;
@@ -814,25 +829,25 @@
         private MaterialSkin.Controls.MaterialButton btnIn;
         private MaterialSkin.Controls.MaterialButton btnHuy;
         private MaterialSkin.Controls.MaterialButton btnLuu;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
+        private MaterialSkin.Controls.MaterialButton btnThem;
         private MaterialSkin.Controls.MaterialTextBox2 txtTimKiem;
         private MaterialSkin.Controls.MaterialButton btnTimKiem;
         private System.Windows.Forms.GroupBox groupBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel13;
         private MaterialSkin.Controls.MaterialTextBox2 txtMaNVDuyet;
-        private MaterialSkin.Controls.MaterialMaskedTextBox txtTGKT;
+        private MaterialSkin.Controls.MaterialMaskedTextBox txtNgayDuyet;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
         private MaterialSkin.Controls.MaterialTextBox2 txtMaBCTL;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private MaterialSkin.Controls.MaterialMaskedTextBox txtTGBD;
+        private MaterialSkin.Controls.MaterialMaskedTextBox txtNgayLap;
         private MaterialSkin.Controls.MaterialTextBox2 txtMaNVLap;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox23;
+        private MaterialSkin.Controls.MaterialTextBox2 txtTongTien;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox22;
+        private MaterialSkin.Controls.MaterialTextBox2 txtSoTLThanhLoc;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private MaterialSkin.Controls.MaterialTextBox2 materialTextBox21;
+        private MaterialSkin.Controls.MaterialTextBox2 txtSoTLCDMD;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
     }
 }

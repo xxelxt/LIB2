@@ -1,4 +1,5 @@
 ﻿using LIB2.Class;
+using LIB2.Class.Types;
 using LIB2.DAL;
 using MaterialSkin;
 using MaterialSkin.Controls;
@@ -12,6 +13,9 @@ namespace LIB2.Forms
 {
     public partial class FrmKiemKe : MaterialForm
     {
+        public UserRole currentRole; 
+        public string Username { get; set; }
+        
         private MaterialSkinManager materialSkinManager = MaterialSkinManager.Instance;
 
         public FrmKiemKe()
@@ -53,6 +57,10 @@ namespace LIB2.Forms
             initForm(childFormKHKK);
             tabPageKHKK.Controls.Add(childFormKHKK);
             childFormKHKK.Show();
+
+            childFormKHKK.Username = this.Username;
+            childFormKHKK.currentRole = this.currentRole;
+            childFormKHKK.LoadData();
         }
 
         private void initFormPKK()
@@ -61,6 +69,9 @@ namespace LIB2.Forms
             initForm(childFormPKK);
             tabPagePKK.Controls.Add(childFormPKK);
             childFormPKK.Show();
+
+            childFormPKK.Username = this.Username;
+            childFormPKK.LoadData();
         }
 
         private void initFormDMSC()
@@ -69,6 +80,9 @@ namespace LIB2.Forms
             initForm(childFormDMSC);
             tabPageDMSC.Controls.Add(childFormDMSC);
             childFormDMSC.Show();
+
+            childFormDMSC.Username = this.Username;
+            childFormDMSC.LoadData();
         }
 
         private void initFormDMBT()
@@ -77,6 +91,9 @@ namespace LIB2.Forms
             initForm(childFormDMBT);
             tabPageDMBT.Controls.Add(childFormDMBT);
             childFormDMBT.Show();
+
+            childFormDMBT.Username = this.Username;
+            childFormDMBT.LoadData();
         }
 
         private void initFormBCKK()
@@ -85,6 +102,10 @@ namespace LIB2.Forms
             initForm(childFormBCKK);
             tabPageBCKK.Controls.Add(childFormBCKK);
             childFormBCKK.Show();
+
+            childFormBCKK.Username = this.Username;
+            childFormBCKK.currentRole = this.currentRole;
+            childFormBCKK.LoadData();
         }
     }
 }

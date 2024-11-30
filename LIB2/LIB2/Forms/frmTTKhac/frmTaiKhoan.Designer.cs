@@ -43,9 +43,9 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.cboPriv = new MaterialSkin.Controls.MaterialComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cboTenNV = new MaterialSkin.Controls.MaterialComboBox();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.txtMaNV = new MaterialSkin.Controls.MaterialTextBox2();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.cboTenNV = new MaterialSkin.Controls.MaterialComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -408,47 +408,6 @@
             this.groupBox1.TabIndex = 50;
             this.groupBox1.TabStop = false;
             // 
-            // cboTenNV
-            // 
-            this.cboTenNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cboTenNV.AutoResize = false;
-            this.cboTenNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.cboTenNV.Depth = 0;
-            this.cboTenNV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboTenNV.DropDownHeight = 174;
-            this.cboTenNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTenNV.DropDownWidth = 121;
-            this.cboTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.cboTenNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.cboTenNV.FormattingEnabled = true;
-            this.cboTenNV.IntegralHeight = false;
-            this.cboTenNV.ItemHeight = 43;
-            this.cboTenNV.Location = new System.Drawing.Point(456, 96);
-            this.cboTenNV.MaxDropDownItems = 4;
-            this.cboTenNV.MinimumSize = new System.Drawing.Size(150, 0);
-            this.cboTenNV.MouseState = MaterialSkin.MouseState.OUT;
-            this.cboTenNV.Name = "cboTenNV";
-            this.cboTenNV.Size = new System.Drawing.Size(261, 49);
-            this.cboTenNV.StartIndex = 0;
-            this.cboTenNV.TabIndex = 51;
-            this.cboTenNV.SelectedIndexChanged += new System.EventHandler(this.cboTenNV_SelectedIndexChanged);
-            // 
-            // materialLabel4
-            // 
-            this.materialLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel4.Location = new System.Drawing.Point(374, 109);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(76, 19);
-            this.materialLabel4.TabIndex = 50;
-            this.materialLabel4.Text = "Nhân viên:";
-            // 
             // txtMaNV
             // 
             this.txtMaNV.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -480,6 +439,47 @@
             this.txtMaNV.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaNV.TrailingIcon = null;
             this.txtMaNV.UseSystemPasswordChar = false;
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel4.Location = new System.Drawing.Point(374, 109);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(76, 19);
+            this.materialLabel4.TabIndex = 50;
+            this.materialLabel4.Text = "Nhân viên:";
+            // 
+            // cboTenNV
+            // 
+            this.cboTenNV.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboTenNV.AutoResize = false;
+            this.cboTenNV.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cboTenNV.Depth = 0;
+            this.cboTenNV.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cboTenNV.DropDownHeight = 174;
+            this.cboTenNV.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTenNV.DropDownWidth = 121;
+            this.cboTenNV.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cboTenNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cboTenNV.FormattingEnabled = true;
+            this.cboTenNV.IntegralHeight = false;
+            this.cboTenNV.ItemHeight = 43;
+            this.cboTenNV.Location = new System.Drawing.Point(456, 96);
+            this.cboTenNV.MaxDropDownItems = 4;
+            this.cboTenNV.MinimumSize = new System.Drawing.Size(150, 0);
+            this.cboTenNV.MouseState = MaterialSkin.MouseState.OUT;
+            this.cboTenNV.Name = "cboTenNV";
+            this.cboTenNV.Size = new System.Drawing.Size(261, 49);
+            this.cboTenNV.StartIndex = 0;
+            this.cboTenNV.TabIndex = 51;
+            this.cboTenNV.SelectedIndexChanged += new System.EventHandler(this.cboTenNV_SelectedIndexChanged);
             // 
             // frmTaiKhoan
             // 
@@ -524,8 +524,8 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialComboBox cboPriv;
         private System.Windows.Forms.GroupBox groupBox1;
-        private MaterialSkin.Controls.MaterialComboBox cboTenNV;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialTextBox2 txtMaNV;
+        private MaterialSkin.Controls.MaterialComboBox cboTenNV;
     }
 }

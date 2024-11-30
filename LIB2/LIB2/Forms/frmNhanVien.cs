@@ -509,14 +509,6 @@ namespace LIB2.Forms
             }
         }
 
-        private void txtLuong_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }
-
         private void txtTimKiem_Enter(object sender, EventArgs e)
         {
             if (txtTimKiem.Text == "Nhập từ khóa tìm kiếm")

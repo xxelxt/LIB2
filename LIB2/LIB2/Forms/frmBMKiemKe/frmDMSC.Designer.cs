@@ -31,13 +31,13 @@
             this.txtTimKiem = new MaterialSkin.Controls.MaterialTextBox2();
             this.btnHuy = new MaterialSkin.Controls.MaterialButton();
             this.btnLuu = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton4 = new MaterialSkin.Controls.MaterialButton();
+            this.btnThem = new MaterialSkin.Controls.MaterialButton();
             this.txtSoLuong = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.txtTenTL = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.txtMaTL = new MaterialSkin.Controls.MaterialTextBox2();
-            this.listViewCTMDSC = new MaterialSkin.Controls.MaterialListView();
+            this.listViewCTDMSC = new MaterialSkin.Controls.MaterialListView();
             this.btnIn = new MaterialSkin.Controls.MaterialButton();
             this.btnXoa = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
@@ -45,6 +45,8 @@
             this.txtMaNV = new MaterialSkin.Controls.MaterialTextBox2();
             this.listViewDMSC = new MaterialSkin.Controls.MaterialListView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnXoaTL = new MaterialSkin.Controls.MaterialButton();
+            this.btnThemTL = new MaterialSkin.Controls.MaterialButton();
             this.materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
             this.txtNgayLap = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
@@ -54,8 +56,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTongSoTL = new MaterialSkin.Controls.MaterialTextBox2();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
-            this.btnXoaTL = new MaterialSkin.Controls.MaterialButton();
-            this.btnThemTL = new MaterialSkin.Controls.MaterialButton();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -92,6 +92,9 @@
             this.txtTimKiem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTimKiem.TrailingIcon = null;
             this.txtTimKiem.UseSystemPasswordChar = false;
+            this.txtTimKiem.Enter += new System.EventHandler(this.txtTimKiem_Enter);
+            this.txtTimKiem.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTimKiem_KeyDown);
+            this.txtTimKiem.Leave += new System.EventHandler(this.txtTimKiem_Leave);
             // 
             // btnHuy
             // 
@@ -116,6 +119,7 @@
             this.btnHuy.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnHuy.UseAccentColor = false;
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnLuu
             // 
@@ -140,30 +144,32 @@
             this.btnLuu.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnLuu.UseAccentColor = false;
             this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // materialButton4
+            // btnThem
             // 
-            this.materialButton4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.materialButton4.AutoSize = false;
-            this.materialButton4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton4.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.materialButton4.Depth = 0;
-            this.materialButton4.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.materialButton4.HighEmphasis = true;
-            this.materialButton4.Icon = null;
-            this.materialButton4.Location = new System.Drawing.Point(274, 756);
-            this.materialButton4.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton4.MaximumSize = new System.Drawing.Size(0, 36);
-            this.materialButton4.MinimumSize = new System.Drawing.Size(80, 36);
-            this.materialButton4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton4.Name = "materialButton4";
-            this.materialButton4.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton4.Size = new System.Drawing.Size(80, 36);
-            this.materialButton4.TabIndex = 197;
-            this.materialButton4.Text = "Thêm";
-            this.materialButton4.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton4.UseAccentColor = false;
-            this.materialButton4.UseVisualStyleBackColor = true;
+            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnThem.AutoSize = false;
+            this.btnThem.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnThem.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnThem.Depth = 0;
+            this.btnThem.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.HighEmphasis = true;
+            this.btnThem.Icon = null;
+            this.btnThem.Location = new System.Drawing.Point(274, 756);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnThem.MaximumSize = new System.Drawing.Size(0, 36);
+            this.btnThem.MinimumSize = new System.Drawing.Size(80, 36);
+            this.btnThem.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnThem.Name = "btnThem";
+            this.btnThem.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnThem.Size = new System.Drawing.Size(80, 36);
+            this.btnThem.TabIndex = 197;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnThem.UseAccentColor = false;
+            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtSoLuong
             // 
@@ -196,6 +202,7 @@
             this.txtSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtSoLuong.TrailingIcon = null;
             this.txtSoLuong.UseSystemPasswordChar = false;
+            this.txtSoLuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSoLuong_KeyPress);
             // 
             // materialLabel3
             // 
@@ -290,30 +297,32 @@
             this.txtMaTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtMaTL.TrailingIcon = null;
             this.txtMaTL.UseSystemPasswordChar = false;
+            this.txtMaTL.TextChanged += new System.EventHandler(this.txtMaTL_TextChanged);
             // 
-            // listViewCTMDSC
+            // listViewCTDMSC
             // 
-            this.listViewCTMDSC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.listViewCTDMSC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listViewCTMDSC.AutoSizeTable = false;
-            this.listViewCTMDSC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.listViewCTMDSC.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listViewCTMDSC.CheckBoxes = true;
-            this.listViewCTMDSC.Depth = 0;
-            this.listViewCTMDSC.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listViewCTMDSC.FullRowSelect = true;
-            this.listViewCTMDSC.HideSelection = false;
-            this.listViewCTMDSC.Location = new System.Drawing.Point(384, 338);
-            this.listViewCTMDSC.MinimumSize = new System.Drawing.Size(300, 200);
-            this.listViewCTMDSC.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.listViewCTMDSC.MouseState = MaterialSkin.MouseState.OUT;
-            this.listViewCTMDSC.Name = "listViewCTMDSC";
-            this.listViewCTMDSC.OwnerDraw = true;
-            this.listViewCTMDSC.Size = new System.Drawing.Size(617, 394);
-            this.listViewCTMDSC.TabIndex = 203;
-            this.listViewCTMDSC.UseCompatibleStateImageBehavior = false;
-            this.listViewCTMDSC.View = System.Windows.Forms.View.Details;
+            this.listViewCTDMSC.AutoSizeTable = false;
+            this.listViewCTDMSC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.listViewCTDMSC.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listViewCTDMSC.CheckBoxes = true;
+            this.listViewCTDMSC.Depth = 0;
+            this.listViewCTDMSC.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewCTDMSC.FullRowSelect = true;
+            this.listViewCTDMSC.HideSelection = false;
+            this.listViewCTDMSC.Location = new System.Drawing.Point(384, 338);
+            this.listViewCTDMSC.MinimumSize = new System.Drawing.Size(300, 200);
+            this.listViewCTDMSC.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.listViewCTDMSC.MouseState = MaterialSkin.MouseState.OUT;
+            this.listViewCTDMSC.Name = "listViewCTDMSC";
+            this.listViewCTDMSC.OwnerDraw = true;
+            this.listViewCTDMSC.Size = new System.Drawing.Size(617, 394);
+            this.listViewCTDMSC.TabIndex = 203;
+            this.listViewCTDMSC.UseCompatibleStateImageBehavior = false;
+            this.listViewCTDMSC.View = System.Windows.Forms.View.Details;
+            this.listViewCTDMSC.SelectedIndexChanged += new System.EventHandler(this.listViewCTDMSC_SelectedIndexChanged);
             // 
             // btnIn
             // 
@@ -338,6 +347,7 @@
             this.btnIn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnIn.UseAccentColor = false;
             this.btnIn.UseVisualStyleBackColor = true;
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
             // 
             // btnXoa
             // 
@@ -362,6 +372,7 @@
             this.btnXoa.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnXoa.UseAccentColor = false;
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // materialLabel8
             // 
@@ -456,6 +467,7 @@
             this.listViewDMSC.TabIndex = 202;
             this.listViewDMSC.UseCompatibleStateImageBehavior = false;
             this.listViewDMSC.View = System.Windows.Forms.View.Details;
+            this.listViewDMSC.SelectedIndexChanged += new System.EventHandler(this.listViewDMSC_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -475,6 +487,58 @@
             this.groupBox3.Size = new System.Drawing.Size(464, 230);
             this.groupBox3.TabIndex = 193;
             this.groupBox3.TabStop = false;
+            // 
+            // btnXoaTL
+            // 
+            this.btnXoaTL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnXoaTL.AutoSize = false;
+            this.btnXoaTL.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnXoaTL.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnXoaTL.Depth = 0;
+            this.btnXoaTL.DrawShadows = false;
+            this.btnXoaTL.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaTL.HighEmphasis = true;
+            this.btnXoaTL.Icon = null;
+            this.btnXoaTL.Location = new System.Drawing.Point(331, 170);
+            this.btnXoaTL.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnXoaTL.MaximumSize = new System.Drawing.Size(0, 36);
+            this.btnXoaTL.MinimumSize = new System.Drawing.Size(80, 36);
+            this.btnXoaTL.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnXoaTL.Name = "btnXoaTL";
+            this.btnXoaTL.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnXoaTL.Size = new System.Drawing.Size(108, 36);
+            this.btnXoaTL.TabIndex = 220;
+            this.btnXoaTL.Text = "Xoá tài liệu";
+            this.btnXoaTL.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnXoaTL.UseAccentColor = false;
+            this.btnXoaTL.UseVisualStyleBackColor = true;
+            this.btnXoaTL.Click += new System.EventHandler(this.btnXoaTL_Click);
+            // 
+            // btnThemTL
+            // 
+            this.btnThemTL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemTL.AutoSize = false;
+            this.btnThemTL.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnThemTL.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnThemTL.Depth = 0;
+            this.btnThemTL.DrawShadows = false;
+            this.btnThemTL.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemTL.HighEmphasis = true;
+            this.btnThemTL.Icon = null;
+            this.btnThemTL.Location = new System.Drawing.Point(207, 170);
+            this.btnThemTL.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnThemTL.MaximumSize = new System.Drawing.Size(0, 36);
+            this.btnThemTL.MinimumSize = new System.Drawing.Size(80, 36);
+            this.btnThemTL.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnThemTL.Name = "btnThemTL";
+            this.btnThemTL.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnThemTL.Size = new System.Drawing.Size(116, 36);
+            this.btnThemTL.TabIndex = 219;
+            this.btnThemTL.Text = "Thêm tài liệu";
+            this.btnThemTL.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnThemTL.UseAccentColor = false;
+            this.btnThemTL.UseVisualStyleBackColor = true;
+            this.btnThemTL.Click += new System.EventHandler(this.btnThemTL_Click);
             // 
             // materialLabel11
             // 
@@ -619,6 +683,7 @@
             this.btnTimKiem.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.btnTimKiem.UseAccentColor = false;
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // groupBox1
             // 
@@ -683,56 +748,6 @@
             this.materialLabel4.TabIndex = 147;
             this.materialLabel4.Text = "Tổng số TL:";
             // 
-            // btnXoaTL
-            // 
-            this.btnXoaTL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoaTL.AutoSize = false;
-            this.btnXoaTL.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnXoaTL.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnXoaTL.Depth = 0;
-            this.btnXoaTL.DrawShadows = false;
-            this.btnXoaTL.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaTL.HighEmphasis = true;
-            this.btnXoaTL.Icon = null;
-            this.btnXoaTL.Location = new System.Drawing.Point(331, 170);
-            this.btnXoaTL.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnXoaTL.MaximumSize = new System.Drawing.Size(0, 36);
-            this.btnXoaTL.MinimumSize = new System.Drawing.Size(80, 36);
-            this.btnXoaTL.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnXoaTL.Name = "btnXoaTL";
-            this.btnXoaTL.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnXoaTL.Size = new System.Drawing.Size(108, 36);
-            this.btnXoaTL.TabIndex = 220;
-            this.btnXoaTL.Text = "Xoá tài liệu";
-            this.btnXoaTL.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnXoaTL.UseAccentColor = false;
-            this.btnXoaTL.UseVisualStyleBackColor = true;
-            // 
-            // btnThemTL
-            // 
-            this.btnThemTL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThemTL.AutoSize = false;
-            this.btnThemTL.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnThemTL.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            this.btnThemTL.Depth = 0;
-            this.btnThemTL.DrawShadows = false;
-            this.btnThemTL.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemTL.HighEmphasis = true;
-            this.btnThemTL.Icon = null;
-            this.btnThemTL.Location = new System.Drawing.Point(207, 170);
-            this.btnThemTL.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnThemTL.MaximumSize = new System.Drawing.Size(0, 36);
-            this.btnThemTL.MinimumSize = new System.Drawing.Size(80, 36);
-            this.btnThemTL.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btnThemTL.Name = "btnThemTL";
-            this.btnThemTL.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.btnThemTL.Size = new System.Drawing.Size(116, 36);
-            this.btnThemTL.TabIndex = 219;
-            this.btnThemTL.Text = "Thêm tài liệu";
-            this.btnThemTL.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.btnThemTL.UseAccentColor = false;
-            this.btnThemTL.UseVisualStyleBackColor = true;
-            // 
             // frmDMSC
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -742,8 +757,8 @@
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.btnLuu);
-            this.Controls.Add(this.materialButton4);
-            this.Controls.Add(this.listViewCTMDSC);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.listViewCTDMSC);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.cboTimKiem);
@@ -755,6 +770,7 @@
             this.Name = "frmDMSC";
             this.Padding = new System.Windows.Forms.Padding(3, 80, 6, 6);
             this.Text = "frmDMSC";
+            this.Load += new System.EventHandler(this.frmDMSC_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -768,13 +784,13 @@
         private MaterialSkin.Controls.MaterialTextBox2 txtTimKiem;
         private MaterialSkin.Controls.MaterialButton btnHuy;
         private MaterialSkin.Controls.MaterialButton btnLuu;
-        private MaterialSkin.Controls.MaterialButton materialButton4;
+        private MaterialSkin.Controls.MaterialButton btnThem;
         private MaterialSkin.Controls.MaterialTextBox2 txtSoLuong;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialTextBox2 txtTenTL;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialTextBox2 txtMaTL;
-        private MaterialSkin.Controls.MaterialListView listViewCTMDSC;
+        private MaterialSkin.Controls.MaterialListView listViewCTDMSC;
         private MaterialSkin.Controls.MaterialButton btnIn;
         private MaterialSkin.Controls.MaterialButton btnXoa;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;

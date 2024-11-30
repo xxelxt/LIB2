@@ -148,7 +148,7 @@ namespace LIB2.DAL
 
         public static string GetMaNVByTenNV(string tenNV)
         {
-            string query = "SELECT NV.MaNV FROM NhanVien NV INNER JOIN TaiKhoan TK ON NV.TenDangNhap = TK.TenDangNhap WHERE NV.TenNV = @TenNV";
+            string query = $"SELECT NV.MaNV FROM {TableName} NV WHERE NV.TenNV = @TenNV";
             SqlParameter[] parameters = new SqlParameter[]
             {
                 new SqlParameter("@TenNV", tenNV)

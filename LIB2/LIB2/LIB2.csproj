@@ -312,10 +312,10 @@
     <Compile Include="Forms\frmTTKhac\frmKhoa.Designer.cs">
       <DependentUpon>frmKhoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmTTKhac\frmNganh.cs">
+    <Compile Include="Forms\frmTTTaiLieuKhac\frmNganh.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmTTKhac\frmNganh.Designer.cs">
+    <Compile Include="Forms\frmTTTaiLieuKhac\frmNganh.Designer.cs">
       <DependentUpon>frmNganh.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmTTKhac\frmPhongBan.cs">
@@ -330,10 +330,10 @@
     <Compile Include="Forms\frmKho.Designer.cs">
       <DependentUpon>frmKho.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmKhoaLuan.cs">
+    <Compile Include="Forms\frmTaiLieu\frmKhoaLuan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmKhoaLuan.Designer.cs">
+    <Compile Include="Forms\frmTaiLieu\frmKhoaLuan.Designer.cs">
       <DependentUpon>frmKhoaLuan.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmKiemKe.cs">
@@ -420,10 +420,10 @@
     <Compile Include="Forms\frmPhat.Designer.cs">
       <DependentUpon>frmPhat.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmTapChi.cs">
+    <Compile Include="Forms\frmTaiLieu\frmTapChi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmTapChi.Designer.cs">
+    <Compile Include="Forms\frmTaiLieu\frmTapChi.Designer.cs">
       <DependentUpon>frmTapChi.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmThanhLoc.cs">
@@ -483,16 +483,16 @@
     <Compile Include="Class\DAL\old\ThueDAL.cs" />
     <Compile Include="Class\DAL\old\TraDAL.cs" />
     <Compile Include="Class\DAL\TTKhac\ViPhamDAL.cs" />
-    <Compile Include="Forms\frmTTKhac\frmLinhVuc.cs">
+    <Compile Include="Forms\frmTTTaiLieuKhac\frmLinhVuc.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmTTKhac\frmLinhVuc.Designer.cs">
+    <Compile Include="Forms\frmTTTaiLieuKhac\frmLinhVuc.Designer.cs">
       <DependentUpon>frmLinhVuc.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmTTKhac\frmLoaiAnPham.cs">
+    <Compile Include="Forms\frmTTTaiLieuKhac\frmLoaiAnPham.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmTTKhac\frmLoaiAnPham.Designer.cs">
+    <Compile Include="Forms\frmTTTaiLieuKhac\frmLoaiAnPham.Designer.cs">
       <DependentUpon>frmLoaiAnPham.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMain.cs">
@@ -501,10 +501,10 @@
     <Compile Include="Forms\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmTTKhac\frmNgonNgu.cs">
+    <Compile Include="Forms\frmTTTaiLieuKhac\frmNgonNgu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmTTKhac\frmNgonNgu.Designer.cs">
+    <Compile Include="Forms\frmTTTaiLieuKhac\frmNgonNgu.Designer.cs">
       <DependentUpon>frmNgonNgu.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmNhanVien.cs">
@@ -513,10 +513,10 @@
     <Compile Include="Forms\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmSach.cs">
+    <Compile Include="Forms\frmTaiLieu\frmSach.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmSach.Designer.cs">
+    <Compile Include="Forms\frmTaiLieu\frmSach.Designer.cs">
       <DependentUpon>frmSach.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmTacGia.cs">
@@ -599,7 +599,7 @@
     <EmbeddedResource Include="Forms\frmKho.resx">
       <DependentUpon>frmKho.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmKhoaLuan.resx">
+    <EmbeddedResource Include="Forms\frmTaiLieu\frmKhoaLuan.resx">
       <DependentUpon>frmKhoaLuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmKiemKe.resx">
@@ -629,7 +629,7 @@
     <EmbeddedResource Include="Forms\frmTaiLieu.resx">
       <DependentUpon>frmTaiLieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmTapChi.resx">
+    <EmbeddedResource Include="Forms\frmTaiLieu\frmTapChi.resx">
       <DependentUpon>frmTapChi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmThanhLoc.resx">
@@ -644,7 +644,7 @@
     <EmbeddedResource Include="Forms\frmTTKhac\frmKhoa.resx">
       <DependentUpon>frmKhoa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmTTKhac\frmNganh.resx">
+    <EmbeddedResource Include="Forms\frmTTTaiLieuKhac\frmNganh.resx">
       <DependentUpon>frmNganh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTTKhac\frmPhongBan.resx">
@@ -659,22 +659,22 @@
     <EmbeddedResource Include="Forms\newfrmLogin.resx">
       <DependentUpon>newfrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmTTKhac\frmLinhVuc.resx">
+    <EmbeddedResource Include="Forms\frmTTTaiLieuKhac\frmLinhVuc.resx">
       <DependentUpon>frmLinhVuc.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmTTKhac\frmLoaiAnPham.resx">
+    <EmbeddedResource Include="Forms\frmTTTaiLieuKhac\frmLoaiAnPham.resx">
       <DependentUpon>frmLoaiAnPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmTTKhac\frmNgonNgu.resx">
+    <EmbeddedResource Include="Forms\frmTTTaiLieuKhac\frmNgonNgu.resx">
       <DependentUpon>frmNgonNgu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmSach.resx">
+    <EmbeddedResource Include="Forms\frmTaiLieu\frmSach.resx">
       <DependentUpon>frmSach.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmTacGia.resx">
