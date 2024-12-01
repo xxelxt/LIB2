@@ -822,16 +822,11 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Login_LeftImg.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Login_LeftImgCut.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Login_Logo.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AppIcon.ico" />
+    <None Include="Resources\Login_LeftImgCut.jpg" />
     <None Include="Resources\tabPageTLIcon.png" />
     <None Include="Resources\tabPageTTTaiLieuKhacIcon.png" />
     <None Include="Resources\tabPageRaVaoIcon.png" />

@@ -315,8 +315,9 @@
             // 
             // txtMaBD
             // 
-            this.txtMaBD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtMaBD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMaBD.AnimateReadOnly = true;
             this.txtMaBD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.txtMaBD.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
