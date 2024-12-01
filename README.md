@@ -9,19 +9,7 @@
 
 - 💻 **Lớp học phần**: 241IS60A02
 
-### ✊ Danh sách thành viên
-
-| Họ và tên           | Mã sinh viên | 🔗 Link to GitHub profile                   |
-| ------------------- | ------------ | -----------------------------------------   |
-| Phạm Ngọc Nghiệp 🌟 | 24A4042603   | [xxelxt](https://github.com/xxelxt)         |
-|     |    |    |
-|     |    |    |
-|     |    |    |
-|     |    |    |
-
 </details>
-
-### 📘 Giới thiệu
 
 ### 🚀 Tiện ích sử dụng
 
