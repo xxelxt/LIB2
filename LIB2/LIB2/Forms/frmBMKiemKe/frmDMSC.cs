@@ -520,14 +520,22 @@ namespace LIB2.Forms
         {
             try
             {
-                string maDMSC = txtMaDMSC.Text;
-                DataTable tblThongTinDMSC, tblThongTinCTDMSC;
+                string maDMSC = txtMaDMSC.Text.Trim();
+                DataTable tblThongTinDMSC = DMSCDAL.GetThongTinDMSC(maDMSC);
+                DataTable tblThongTinCTDMSC = DMSCDAL.GetCTDMSC(maDMSC);
 
-                tblThongTinDMSC = DMSCDAL.GetThongTinDMSC(maDMSC);
-                tblThongTinCTDMSC = DMSCDAL.GetCTDMSC(maDMSC);
+                if (tblThongTinDMSC.Rows.Count > 0)
+                {
+                    string dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                    string outputPath = @"E:\" + maDMSC + "_" + dateTime + ".pdf";
+                    ExportToPDF.exportDMSC(tblThongTinDMSC, tblThongTinCTDMSC, outputPath);
+                    Functions.HandleInfo($"Đã lưu danh mục sửa chữa tại: {outputPath}");
 
-                // Tạo và hiển thị trong Excel
-                // ExcelHelper.CreateBillThue(tblThongTinDMSC, tblThongTinDMSC);
+                }
+                else
+                {
+                    Functions.HandleInfo("Không tìm thấy danh mục sửa chữa nào");
+                }
             }
             catch (Exception ex)
             {

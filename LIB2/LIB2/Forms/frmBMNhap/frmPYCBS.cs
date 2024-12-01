@@ -118,6 +118,7 @@ namespace LIB2.Forms
             txtNgayDuyet.Enabled = false;
 
             btnDuyet.Enabled = false;
+            btnEmail.Enabled = false;
         }
 
         private void AdjustColumnWidth()
@@ -341,6 +342,8 @@ namespace LIB2.Forms
                 btnHuy.Enabled = true;
                 btnIn.Enabled = true;
 
+                btnEmail.Enabled = true;
+
                 if (currentRole == UserRole.Admin && string.IsNullOrEmpty(txtMaNVDuyet.Text))
                 {
                     btnDuyet.Enabled = true;
@@ -373,6 +376,7 @@ namespace LIB2.Forms
                 btnXoaTL.Enabled = false;
 
                 btnDuyet.Enabled = false;
+                btnEmail.Enabled = false;
             }
         }
 
@@ -690,14 +694,22 @@ namespace LIB2.Forms
         {
             try
             {
-                string maPYCBS = txtMaPYCBS.Text;
-                DataTable tblThongTinPYCBS, tblThongTinCTPYCBS;
+                string maPYCBS = txtMaPYCBS.Text.Trim();
+                DataTable tblThongTinPYCBS = PYCBSDAL.GetThongTinPYCBS(maPYCBS);
+                DataTable tblThongTinCTPYCBS = PYCBSDAL.GetCTPYCBS(maPYCBS);
 
-                tblThongTinPYCBS = PYCBSDAL.GetThongTinPYCBS(maPYCBS);
-                tblThongTinCTPYCBS = PYCBSDAL.GetCTPYCBS(maPYCBS);
+                if (tblThongTinPYCBS.Rows.Count > 0)
+                {
+                    string dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                    string outputPath = @"E:\" + maPYCBS + "_" + dateTime + ".pdf";
+                    ExportToPDF.exportPYCBS(tblThongTinPYCBS, tblThongTinCTPYCBS, outputPath);
+                    Functions.HandleInfo($"Đã lưu phiếu nhập kho tại: {outputPath}");
 
-                // Tạo và hiển thị trong Excel
-                // ExcelHelper.CreateBillThue(tblThongTinPYCBS, tblThongTinPYCBS);
+                }
+                else
+                {
+                    Functions.HandleInfo("Không tìm thấy phiếu nhập kho nào");
+                }
             }
             catch (Exception ex)
             {
@@ -741,7 +753,7 @@ namespace LIB2.Forms
 
                 int namXB = Convert.ToInt32(txtNamXB.Text);
                 string moTa = txtMoTa.Text.Trim();
-                string loaiTL = cboLoaiTL.SelectedValue.ToString();
+                string loaiTL = cboLoaiTL.Text;
 
                 int soLuong = Convert.ToInt32(txtSoLuong.Text);
                 string mucDoYC = cboMDYC.Text;
@@ -784,6 +796,14 @@ namespace LIB2.Forms
                     }
                 }
             }
+        }
+
+        private void btnEmail_Click(object sender, EventArgs e)
+        {
+            var childFormPYCBSEmail = new frmPYCBSEmail();
+            childFormPYCBSEmail.maPYCBS = txtMaPYCBS.Text.Trim();
+
+            childFormPYCBSEmail.Show();
         }
 
         private void PerformSearch()

@@ -452,14 +452,24 @@ namespace LIB2.Forms
         {
             try
             {
-                string maBCTL = txtMaBCTL.Text;
-                DataTable tblThongTinBCTL, tblThongTinCTBCTL;
+                string maBCTL = txtMaBCTL.Text.Trim();
+                DataTable tblThongTinBCTL = BCTLDAL.GetThongTinBCTL(maBCTL);
 
-                tblThongTinBCTL = BCKKDAL.GetThongTinBCKK(maBCTL);
-                tblThongTinCTBCTL = BCKKDAL.GetCTBCKK(maBCTL);
+                string maDMTL = BCTLDAL.GetMaDMTLByMaBCTL(maBCTL);
+                DataTable tblThongTinCTDMTL = DMTLDAL.GetCTDMTL(maDMTL);
 
-                // Tạo và hiển thị trong Excel
-                // ExcelHelper.CreateBillThue(tblThongTinBCTL, tblThongTinBCTL);
+                if (tblThongTinBCTL.Rows.Count > 0)
+                {
+                    string dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                    string outputPath = @"E:\" + maBCTL + "_" + dateTime + ".pdf";
+                    ExportToPDF.exportBCTL(tblThongTinBCTL, tblThongTinCTDMTL, outputPath);
+                    Functions.HandleInfo($"Đã lưu báo cáo thanh lọc tại: {outputPath}");
+
+                }
+                else
+                {
+                    Functions.HandleInfo("Không tìm thấy báo cáo thanh lọc nào");
+                }
             }
             catch (Exception ex)
             {

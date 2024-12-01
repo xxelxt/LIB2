@@ -101,5 +101,23 @@ namespace LIB2.DAL
 
             DatabaseLayer.RunSqlDel(sqlDelete, deleteParams);
         }
+
+        public static string GetEmailByMaNCC(string maNCC)
+        {
+            string sql = "SELECT Email FROM " + TableName + " WHERE MaNCC = @MaNCC";
+
+            SqlParameter[] sqlParams = { new SqlParameter("@MaNCC", maNCC) };
+
+            DataTable dt = DatabaseLayer.GetDataToTable(sql, sqlParams);
+
+            if (dt.Rows.Count == 0)
+            {
+                return "";
+            }
+            else
+            {
+                return dt.Rows[0]["Email"].ToString();
+            }
+        }
     }
 }

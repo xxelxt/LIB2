@@ -604,14 +604,22 @@ namespace LIB2.Forms
         {
             try
             {
-                string maDMTL = txtMaDMTL.Text;
-                DataTable tblThongTinDMTL, tblThongTinCTDMTL;
+                string maDMTL = txtMaDMTL.Text.Trim();
+                DataTable tblThongTinDMTL = DMTLDAL.GetThongTinDMTL(maDMTL);
+                DataTable tblThongTinCTDMTL = DMTLDAL.GetCTDMTL(maDMTL);
 
-                tblThongTinDMTL = DMTLDAL.GetThongTinDMTL(maDMTL);
-                tblThongTinCTDMTL = DMTLDAL.GetCTDMTL(maDMTL);
+                if (tblThongTinDMTL.Rows.Count > 0)
+                {
+                    string dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                    string outputPath = @"E:\" + maDMTL + "_" + dateTime + ".pdf";
+                    ExportToPDF.exportDMTL(tblThongTinDMTL, tblThongTinCTDMTL, outputPath);
+                    Functions.HandleInfo($"Đã lưu danh mục thanh lọc tại: {outputPath}");
 
-                // Tạo và hiển thị trong Excel
-                // ExcelHelper.CreateBillThue(tblThongTinDMTL, tblThongTinDMTL);
+                }
+                else
+                {
+                    Functions.HandleInfo("Không tìm thấy danh mục thanh lọc nào");
+                }
             }
             catch (Exception ex)
             {

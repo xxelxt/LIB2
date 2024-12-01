@@ -512,14 +512,22 @@ namespace LIB2.Forms
         {
             try
             {
-                string maPKK = txtMaPKK.Text;
-                DataTable tblThongTinPKK, tblThongTinCTPKK;
+                string maPKK = txtMaPKK.Text.Trim();
+                DataTable tblThongTinPKK = PKKDAL.GetThongTinPKK(maPKK);
+                DataTable tblThongTinCTPKK = PKKDAL.GetCTPKK(maPKK);
 
-                tblThongTinPKK = PKKDAL.GetThongTinPKK(maPKK);
-                tblThongTinCTPKK = PKKDAL.GetCTPKK(maPKK);
+                if (tblThongTinPKK.Rows.Count > 0)
+                {
+                    string dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                    string outputPath = @"E:\" + maPKK + "_" + dateTime + ".pdf";
+                    ExportToPDF.exportPKK(tblThongTinPKK, tblThongTinCTPKK, outputPath);
+                    Functions.HandleInfo($"Đã lưu phiếu kiểm kê tại: {outputPath}");
 
-                // Tạo và hiển thị trong Excel
-                // ExcelHelper.CreateBillThue(tblThongTinPKK, tblThongTinPKK);
+                }
+                else
+                {
+                    Functions.HandleInfo("Không tìm thấy phiếu kiểm kê nào");
+                }
             }
             catch (Exception ex)
             {

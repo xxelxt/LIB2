@@ -183,5 +183,23 @@ namespace LIB2.DAL
 
             DatabaseLayer.RunSql(sqlUpdate, updateParams);
         }
+
+        public static string GetMaDMTLByMaBCTL(string maBCTL)
+        {
+            string sql = "SELECT MaDMThanhLoc FROM " + TableName + " WHERE MaBCThanhLoc = @MaBCTL";
+
+            SqlParameter[] sqlParams = { new SqlParameter("@MaBCTL", maBCTL) };
+
+            DataTable dt = DatabaseLayer.GetDataToTable(sql, sqlParams);
+
+            if (dt.Rows.Count == 0)
+            {
+                return "";
+            }
+            else
+            {
+                return dt.Rows[0]["MaDMThanhLoc"].ToString();
+            }
+        }
     }
 }

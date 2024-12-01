@@ -1,7 +1,6 @@
 ﻿using LIB2.Class;
 using LIB2.Class.Types;
 using LIB2.DAL;
-using LIB2.Database;
 using MaterialSkin.Controls;
 using System;
 using System.Data;
@@ -597,14 +596,22 @@ namespace LIB2.Forms
         {
             try
             {
-                string maPNK = txtMaPNK.Text;
-                DataTable tblThongTinPNK, tblThongTinCTPNK;
+                string maPNK = txtMaPNK.Text.Trim();
+                DataTable tblThongTinPNK = PNKDAL.GetThongTinPNK(maPNK);
+                DataTable tblThongTinCTPNK = PNKDAL.GetCTPNK(maPNK);
 
-                tblThongTinPNK = PNKDAL.GetThongTinPNK(maPNK);
-                tblThongTinCTPNK = PNKDAL.GetCTPNK(maPNK);
+                if (tblThongTinPNK.Rows.Count > 0)
+                {
+                    string dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                    string outputPath = @"E:\" + maPNK + "_" + dateTime + ".pdf";
+                    ExportToPDF.exportPNK(tblThongTinPNK, tblThongTinCTPNK, outputPath);
+                    Functions.HandleInfo($"Đã lưu phiếu nhập kho tại: {outputPath}");
 
-                // Tạo và hiển thị trong Excel
-                // ExcelHelper.CreateBillThue(tblThongTinPNK, tblThongTinPNK);
+                }
+                else
+                {
+                    Functions.HandleInfo("Không tìm thấy phiếu nhập kho nào");
+                }
             }
             catch (Exception ex)
             {

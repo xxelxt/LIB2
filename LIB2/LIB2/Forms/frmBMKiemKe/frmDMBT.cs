@@ -554,14 +554,22 @@ namespace LIB2.Forms
         {
             try
             {
-                string maDMBT = txtMaDMBT.Text;
-                DataTable tblThongTinDMBT, tblThongTinCTDMBT;
+                string maDMBT = txtMaDMBT.Text.Trim();
+                DataTable tblThongTinDMBT = DMBTDAL.GetThongTinDMBT(maDMBT);
+                DataTable tblThongTinCTDMBT = DMBTDAL.GetCTDMBT(maDMBT);
 
-                tblThongTinDMBT = DMBTDAL.GetThongTinDMBT(maDMBT);
-                tblThongTinCTDMBT = DMBTDAL.GetCTDMBT(maDMBT);
+                if (tblThongTinDMBT.Rows.Count > 0)
+                {
+                    string dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                    string outputPath = @"E:\" + maDMBT + "_" + dateTime + ".pdf";
+                    ExportToPDF.exportDMBT(tblThongTinDMBT, tblThongTinCTDMBT, outputPath);
+                    Functions.HandleInfo($"Đã lưu danh mục bồi thường tại: {outputPath}");
 
-                // Tạo và hiển thị trong Excel
-                // ExcelHelper.CreateBillThue(tblThongTinDMBT, tblThongTinDMBT);
+                }
+                else
+                {
+                    Functions.HandleInfo("Không tìm thấy danh mục bồi thường nào");
+                }
             }
             catch (Exception ex)
             {
@@ -712,7 +720,10 @@ namespace LIB2.Forms
 
         private void txtSoLuong_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void txtDonGia_KeyPress(object sender, KeyPressEventArgs e)

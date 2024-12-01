@@ -78,9 +78,10 @@ namespace LIB2.Forms
             listViewCTBCKK.UseCompatibleStateImageBehavior = false;
             listViewCTBCKK.View = View.Details;
 
-            listViewCTBCKK.Columns.Add("MaTL", "Mã kho");
-            listViewCTBCKK.Columns.Add("TenTL", "Tên kho");
-            listViewCTBCKK.Columns.Add("SoLuong", "Số lượng");
+            listViewCTBCKK.Columns.Add("MaKho", "Mã kho");
+            listViewCTBCKK.Columns.Add("TenKho", "Tên kho");
+            listViewCTBCKK.Columns.Add("SoTL", "Số TL");
+            listViewCTBCKK.Columns.Add("SoBanTL", "Số bản TL");
         }
 
         private void frmBCKK_Load(object sender, EventArgs e)
@@ -98,7 +99,8 @@ namespace LIB2.Forms
 
             txtMaKho.Enabled = false;
             txtTenKho.Enabled = false;
-            txtSoLuong.Enabled = false;
+            txtSoTL.Enabled = false;
+            txtSoBanTL.Enabled = false;
 
             txtTimKiem.Text = "Nhập từ khóa tìm kiếm";
             txtTimKiem.ForeColor = Color.Gray;
@@ -139,18 +141,15 @@ namespace LIB2.Forms
 
         private void AdjustColumnWidthCT()
         {
-            int totalWidth = listViewCTBCKK.ClientSize.Width;
-            double col1Percentage = 0.3;
-            double col2Percentage = 0.4;
-            double col3Percentage = 0.3;
-
-            int col1Width = (int)(totalWidth * col1Percentage);
-            int col2Width = (int)(totalWidth * col2Percentage);
-            int col3Width = (int)(totalWidth * col3Percentage);
+            int col1Width = 100;
+            int col2Width = 100;
+            int col3Width = 150;
+            int col4Width = 100;
 
             listViewCTBCKK.Columns[0].Width = col1Width;
             listViewCTBCKK.Columns[1].Width = col2Width;
             listViewCTBCKK.Columns[2].Width = col3Width;
+            listViewCTBCKK.Columns[3].Width = col4Width;
         }
 
         public void LoadData()
@@ -274,7 +273,8 @@ namespace LIB2.Forms
             {
                 ListViewItem item = new ListViewItem(row["MaKho"].ToString());
                 item.SubItems.Add(row["TenKho"].ToString());
-                item.SubItems.Add(row["SoLuong"].ToString());
+                item.SubItems.Add(row["SoTL"].ToString());
+                item.SubItems.Add(row["SoBanTL"].ToString());
 
                 listViewCTBCKK.Items.Add(item);
             }
@@ -305,7 +305,8 @@ namespace LIB2.Forms
             if (listViewBCKK.SelectedItems.Count > 0)
             {
                 txtMaKho.Enabled = true;
-                txtSoLuong.Enabled = true;
+                txtSoTL.Enabled = true;
+                txtSoBanTL.Enabled = true;
 
                 btnThemKho.Enabled = true;
 
@@ -400,7 +401,8 @@ namespace LIB2.Forms
                 ClearListView(listViewCTBCKK);
 
                 txtMaKho.Enabled = false;
-                txtSoLuong.Enabled = false;
+                txtSoTL.Enabled = false;
+                txtSoBanTL.Enabled = false;
 
                 btnThemKho.Enabled = false;
                 btnXoaKho.Enabled = false;
@@ -429,7 +431,8 @@ namespace LIB2.Forms
                 ListViewItem selectedItem = listViewCTBCKK.SelectedItems[0];
                 txtMaKho.Text = selectedItem.SubItems[0].Text;
                 txtTenKho.Text = selectedItem.SubItems[1].Text;
-                txtSoLuong.Text = selectedItem.SubItems[2].Text;
+                txtSoTL.Text = selectedItem.SubItems[2].Text;
+                txtSoBanTL.Text = selectedItem.SubItems[3].Text;
 
                 btnXoaKho.Enabled = true;
             }
@@ -470,7 +473,8 @@ namespace LIB2.Forms
         {
             txtMaKho.Text = "";
             txtTenKho.Text = "";
-            txtSoLuong.Text = "";
+            txtSoTL.Text = "";
+            txtSoBanTL.Text = "";
         }
 
         private bool ValidateInput()
@@ -594,10 +598,17 @@ namespace LIB2.Forms
                 return false;
             }
 
-            if (string.IsNullOrWhiteSpace(txtSoLuong.Text))
+            if (string.IsNullOrWhiteSpace(txtSoTL.Text))
             {
-                Functions.HandleWarning("Bạn phải nhập số lượng");
-                txtSoLuong.Focus();
+                Functions.HandleWarning("Bạn phải nhập số tài liệu");
+                txtSoTL.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtSoBanTL.Text))
+            {
+                Functions.HandleWarning("Bạn phải nhập số bản tài liệu");
+                txtSoBanTL.Focus();
                 return false;
             }
 
@@ -614,7 +625,8 @@ namespace LIB2.Forms
             btnLuu.Enabled = true;
 
             txtMaKho.Enabled = true;
-            txtSoLuong.Enabled = true;
+            txtSoTL.Enabled = true;
+            txtSoBanTL.Enabled = true;
             btnThemKho.Enabled = true;
 
             ResetValues();
@@ -647,7 +659,8 @@ namespace LIB2.Forms
             txtMaBCKK.Enabled = false;
 
             txtMaKho.Enabled = false;
-            txtSoLuong.Enabled = false;
+            txtSoTL.Enabled = false;
+            txtSoBanTL.Enabled = false;
 
             txtTimKiem.Text = "";
             isSearching = false;
@@ -757,7 +770,8 @@ namespace LIB2.Forms
                         btnIn.Enabled = false;
 
                         txtMaKho.Enabled = false;
-                        txtSoLuong.Enabled = false;
+                        txtSoTL.Enabled = false;
+                        txtSoBanTL.Enabled = false;
                         btnThemKho.Enabled = false;
                         btnXoaKho.Enabled = false;
                     }
@@ -773,14 +787,22 @@ namespace LIB2.Forms
         {
             try
             {
-                string maBCKK = txtMaBCKK.Text;
-                DataTable tblThongTinBCKK, tblThongTinCTBCKK;
+                string maBCKK = txtMaBCKK.Text.Trim();
+                DataTable tblThongTinBCKK = BCKKDAL.GetThongTinBCKK(maBCKK);
+                DataTable tblThongTinCTBCKK = BCKKDAL.GetCTBCKK(maBCKK);
 
-                tblThongTinBCKK = BCKKDAL.GetThongTinBCKK(maBCKK);
-                tblThongTinCTBCKK = BCKKDAL.GetCTBCKK(maBCKK);
+                if (tblThongTinBCKK.Rows.Count > 0)
+                {
+                    string dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                    string outputPath = @"E:\" + maBCKK + "_" + dateTime + ".pdf";
+                    ExportToPDF.exportBCKK(tblThongTinBCKK, tblThongTinCTBCKK, outputPath);
+                    Functions.HandleInfo($"Đã lưu báo cáo kiểm kê tại: {outputPath}");
 
-                // Tạo và hiển thị trong Excel
-                // ExcelHelper.CreateBillThue(tblThongTinBCKK, tblThongTinBCKK);
+                }
+                else
+                {
+                    Functions.HandleInfo("Không tìm thấy báo cáo kiểm kê nào");
+                }
             }
             catch (Exception ex)
             {
@@ -819,7 +841,8 @@ namespace LIB2.Forms
             if (ValidateInputCT())
             {
                 string maKho = txtMaKho.Text.Trim();
-                int soLuong = Convert.ToInt32(txtSoLuong.Text);
+                int soTL = Convert.ToInt32(txtSoTL.Text.Trim());
+                int soBanTL = Convert.ToInt32(txtSoBanTL.Text.Trim());
 
                 if (BCKKDAL.CheckMaKho(maBCKK, maKho))
                 {
@@ -831,7 +854,7 @@ namespace LIB2.Forms
 
                 try
                 {
-                    BCKKDAL.InsertKhoCTBCKK(maBCKK, maKho, soLuong);
+                    BCKKDAL.InsertKhoCTBCKK(maBCKK, maKho, soTL, soBanTL);
                     Functions.HandleInfo("Thêm chi tiết báo cáo kiểm kê thành công");
 
                     LoadDataCT(maBCKK);

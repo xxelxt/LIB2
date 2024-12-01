@@ -30,7 +30,8 @@ namespace LIB2.DAL
                             CT.MaBCKiemKe, 
                             CT.MaKho, 
                             K.TenKho, 
-                            CT.SoLuong 
+                            CT.SoTL, 
+                            CT.SoBanTL 
                         FROM 
                             {TableCTName} CT 
                         INNER JOIN Kho K ON CT.MaKho = K.MaKho 
@@ -227,7 +228,7 @@ namespace LIB2.DAL
 
         public static void DuyetBCKK(string maBCKK, string maNVDuyet, DateTime ngayDuyet)
         {
-            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, NgayDuyet = @NgayDuyetWHERE MaBCKiemKe = @MaBCKK";
+            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, NgayDuyet = @NgayDuyet WHERE MaBCKiemKe = @MaBCKK";
 
             SqlParameter[] updateParams =
             {
@@ -239,14 +240,15 @@ namespace LIB2.DAL
             DatabaseLayer.RunSql(sqlUpdate, updateParams);
         }
 
-        public static void InsertKhoCTBCKK(string maBCKK, string maKho, int soLuong)
+        public static void InsertKhoCTBCKK(string maBCKK, string maKho, int soTL, int soBanTL)
         {
-            string sql = "INSERT INTO " + TableCTName + " (MaBCKiemKe, MaKho, SoLuong) VALUES (@MaBCKK, @MaKho, @SoLuong)";
+            string sql = "INSERT INTO " + TableCTName + " (MaBCKiemKe, MaKho, SoTL, SoBanTL) VALUES (@MaBCKK, @MaKho, @SoTL, @SoBanTL)";
 
             SqlParameter[] sqlParams = {
                 new SqlParameter("@MaBCKK", maBCKK),
                 new SqlParameter("@MaKho", maKho),
-                new SqlParameter("@SoLuong", soLuong)
+                new SqlParameter("@SoTL", soTL),
+                new SqlParameter("@SoBanTL", soBanTL),
             };
 
             DatabaseLayer.RunSql(sql, sqlParams);

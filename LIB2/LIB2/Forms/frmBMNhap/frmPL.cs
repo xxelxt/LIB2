@@ -611,14 +611,22 @@ namespace LIB2.Forms
         {
             try
             {
-                string maPL = txtMaPL.Text;
-                DataTable tblThongTinPL, tblThongTinCTPL;
+                string maPL = txtMaPL.Text.Trim();
+                DataTable tblThongTinPL = PLDAL.GetThongTinPL(maPL);
+                DataTable tblThongTinCTPL = PLDAL.GetCTPL(maPL);
 
-                tblThongTinPL = PLDAL.GetThongTinPL(maPL);
-                tblThongTinCTPL = PLDAL.GetCTPL(maPL);
+                if (tblThongTinPL.Rows.Count > 0)
+                {
+                    string dateTime = DateTime.Now.ToString("yyyyMMdd_HHmmss");
+                    string outputPath = @"E:\" + maPL + "_" + dateTime + ".pdf";
+                    ExportToPDF.exportPL(tblThongTinPL, tblThongTinCTPL, outputPath);
+                    Functions.HandleInfo($"Đã lưu phiếu lỗi tại: {outputPath}");
 
-                // Tạo và hiển thị trong Excel
-                // ExcelHelper.CreateBillThue(tblThongTinPL, tblThongTinPL);
+                }
+                else
+                {
+                    Functions.HandleInfo("Không tìm thấy phiếu lỗi nào");
+                }
             }
             catch (Exception ex)
             {
