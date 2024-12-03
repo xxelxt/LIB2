@@ -12,7 +12,7 @@ namespace LIB2.DAL
 
         public static DataTable GetAllBCKK()
         {
-            string sql = $@"SELECT P.MaBCKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaPhieuKiemKe, P.MaDMSuaChua, P.MaDMBoiThuong, P.NgayLap, P.NgayDuyet, 
+            string sql = $@"SELECT P.MaBCKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaPhieuKiemKe, P.MaDMSuaChua, P.MaDMBoiThuong, P.NgayLap, P.NgayDuyet, P.TrangThai 
                                 P.TGBD, P.TGKT, P.SoTLXepNhamKho, P.SoTLMat, P.TongTienTLMat, P.SoTLSuaChua, P.SoTLBoiThuong, P.TongTienBoiThuong 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
@@ -44,7 +44,7 @@ namespace LIB2.DAL
 
         public static DataTable GetThongTinBCKK(string maBCKK)
         {
-            string sql = $@"SELECT P.MaBCKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaPhieuKiemKe, P.MaDMSuaChua, P.MaDMBoiThuong, P.NgayLap, P.NgayDuyet, 
+            string sql = $@"SELECT P.MaBCKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaPhieuKiemKe, P.MaDMSuaChua, P.MaDMBoiThuong, P.NgayLap, P.NgayDuyet, P.TrangThai 
                                 P.TGBD, P.TGKT, P.SoTLXepNhamKho, P.SoTLMat, P.TongTienTLMat, P.SoTLSuaChua, P.SoTLBoiThuong, P.TongTienBoiThuong 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
@@ -63,7 +63,7 @@ namespace LIB2.DAL
 
         public static DataTable GetBCKKBySearch(string searchOption, string searchKeyword)
         {
-            string sql = $@"SELECT P.MaBCKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaPhieuKiemKe, P.MaDMSuaChua, P.MaDMBoiThuong, P.NgayLap, P.NgayDuyet, 
+            string sql = $@"SELECT P.MaBCKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaPhieuKiemKe, P.MaDMSuaChua, P.MaDMBoiThuong, P.NgayLap, P.NgayDuyet, P.TrangThai 
                                 P.TGBD, P.TGKT, P.SoTLXepNhamKho, P.SoTLMat, P.TongTienTLMat, P.SoTLSuaChua, P.SoTLBoiThuong, P.TongTienBoiThuong 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
@@ -226,14 +226,29 @@ namespace LIB2.DAL
             DatabaseLayer.RunSql(sqlUpdate, updateParams);
         }
 
-        public static void DuyetBCKK(string maBCKK, string maNVDuyet, DateTime ngayDuyet)
+        public static void DuyetBCKK(string maBCKK, string maNVDuyet, DateTime ngayDuyet, bool trangThai)
         {
-            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, NgayDuyet = @NgayDuyet WHERE MaBCKiemKe = @MaBCKK";
+            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, NgayDuyet = @NgayDuyet, TrangThai = @TrangThai WHERE MaBCKiemKe = @MaBCKK";
 
             SqlParameter[] updateParams =
             {
                 new SqlParameter("@MaNVDuyet", maNVDuyet),
                 new SqlParameter("@NgayDuyet", ngayDuyet),
+                new SqlParameter("TrangThai", trangThai),
+                new SqlParameter("@MaBCKK", maBCKK)
+            };
+
+            DatabaseLayer.RunSql(sqlUpdate, updateParams);
+        }
+
+        public static void KhongDuyetBCKK(string maBCKK, string maNVDuyet, bool trangThai)
+        {
+            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, TrangThai = @TrangThai WHERE MaBCKiemKe = @MaBCKK";
+
+            SqlParameter[] updateParams =
+            {
+                new SqlParameter("@MaNVDuyet", maNVDuyet),
+                new SqlParameter("TrangThai", trangThai),
                 new SqlParameter("@MaBCKK", maBCKK)
             };
 

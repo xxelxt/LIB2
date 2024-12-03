@@ -11,7 +11,7 @@ namespace LIB2.DAL
 
         public static DataTable GetAllBCTL()
         {
-            string sql = $@"SELECT P.MaBCThanhLoc, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaDMThanhLoc, P.NgayLap, P.NgayDuyet, P.SoTLChuyenDoiMD, P.SoTLThanhLoc, P.TongTien 
+            string sql = $@"SELECT P.MaBCThanhLoc, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaDMThanhLoc, P.NgayLap, P.NgayDuyet, P.SoTLChuyenDoiMD, P.SoTLThanhLoc, P.TongTien, P.TrangThai 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
                             LEFT JOIN NhanVien NV2 ON P.MaNVDuyet = NV2.MaNV 
@@ -22,7 +22,7 @@ namespace LIB2.DAL
 
         public static DataTable GetThongTinBCTL(string maBCTL)
         {
-            string sql = $@"SELECT P.MaBCThanhLoc, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaDMThanhLoc, P.NgayLap, P.NgayDuyet, P.SoTLChuyenDoiMD, P.SoTLThanhLoc, P.TongTien 
+            string sql = $@"SELECT P.MaBCThanhLoc, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaDMThanhLoc, P.NgayLap, P.NgayDuyet, P.SoTLChuyenDoiMD, P.SoTLThanhLoc, P.TongTien, P.TrangThai 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
                             LEFT JOIN NhanVien NV2 ON P.MaNVDuyet = NV2.MaNV 
@@ -38,7 +38,7 @@ namespace LIB2.DAL
 
         public static DataTable GetBCTLBySearch(string searchOption, string searchKeyword)
         {
-            string sql = $@"SELECT P.MaBCThanhLoc, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaDMThanhLoc, P.NgayLap, P.NgayDuyet, P.SoTLChuyenDoiMD, P.SoTLThanhLoc, P.TongTien 
+            string sql = $@"SELECT P.MaBCThanhLoc, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.MaDMThanhLoc, P.NgayLap, P.NgayDuyet, P.SoTLChuyenDoiMD, P.SoTLThanhLoc, P.TongTien, P.TrangThai 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
                             LEFT JOIN NhanVien NV2 ON P.MaNVDuyet = NV2.MaNV 
@@ -171,13 +171,27 @@ namespace LIB2.DAL
             DatabaseLayer.RunSql(sqlUpdate, updateParams);
         }
 
-        public static void DuyetBCTL(string maBCTL, string maNVDuyet, DateTime ngayDuyet)
+        public static void DuyetBCTL(string maBCTL, string maNVDuyet, DateTime ngayDuyet, bool trangThai)
         {
-            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, NgayDuyet = @NgayDuyet WHERE MaBCThanhLoc = @MaBCTL";
+            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, NgayDuyet = @NgayDuyet, TrangThai = @TrangThai WHERE MaBCThanhLoc = @MaBCTL";
             SqlParameter[] updateParams =
             {
                 new SqlParameter("@MaNVDuyet", maNVDuyet),
                 new SqlParameter("@NgayDuyet", ngayDuyet),
+                new SqlParameter("TrangThai", trangThai),
+                new SqlParameter("@MaBCTL", maBCTL)
+            };
+
+            DatabaseLayer.RunSql(sqlUpdate, updateParams);
+        }
+
+        public static void KhongDuyetBCTL(string maBCTL, string maNVDuyet, bool trangThai)
+        {
+            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, TrangThai = @TrangThai WHERE MaBCThanhLoc = @MaBCTL";
+            SqlParameter[] updateParams =
+            {
+                new SqlParameter("@MaNVDuyet", maNVDuyet),
+                new SqlParameter("TrangThai", trangThai),
                 new SqlParameter("@MaBCTL", maBCTL)
             };
 

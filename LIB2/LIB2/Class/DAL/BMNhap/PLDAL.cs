@@ -12,7 +12,7 @@ namespace LIB2.DAL
 
         public static DataTable GetAllPL()
         {
-            string sql = $@"SELECT P.MaPhieuLoi, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.NguonNhap 
+            string sql = $@"SELECT P.MaPhieuLoi, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.NguonNhap, P.TrangThai 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
                             LEFT JOIN NhanVien NV2 ON P.MaNVDuyet = NV2.MaNV";
@@ -44,7 +44,7 @@ namespace LIB2.DAL
 
         public static DataTable GetThongTinPL(string maPL)
         {
-            string sql = $@"SELECT P.MaPhieuLoi, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.NguonNhap 
+            string sql = $@"SELECT P.MaPhieuLoi, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.NguonNhap, P.TrangThai 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
                             LEFT JOIN NhanVien NV2 ON P.MaNVDuyet = NV2.MaNV 
@@ -59,7 +59,7 @@ namespace LIB2.DAL
 
         public static DataTable GetPLBySearch(string searchOption, string searchKeyword)
         {
-            string sql = $@"SELECT P.MaPhieuLoi, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.NguonNhap 
+            string sql = $@"SELECT P.MaPhieuLoi, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.NguonNhap, P.TrangThai 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
                             LEFT JOIN NhanVien NV2 ON P.MaNVDuyet = NV2.MaNV ";
@@ -199,13 +199,27 @@ namespace LIB2.DAL
             DatabaseLayer.RunSql(sqlUpdate, updateParams);
         }
 
-        public static void DuyetPL(string maPL, string maNVDuyet, DateTime ngayDuyet)
+        public static void DuyetPL(string maPL, string maNVDuyet, DateTime ngayDuyet, bool trangThai)
         {
-            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, NgayDuyet = @NgayDuyet WHERE MaPhieuLoi = @MaPL";
+            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, NgayDuyet = @NgayDuyet, TrangThai = @TrangThai WHERE MaPhieuLoi = @MaPL";
             SqlParameter[] updateParams =
             {
                 new SqlParameter("@MaNVDuyet", maNVDuyet),
                 new SqlParameter("@NgayDuyet", ngayDuyet),
+                new SqlParameter("TrangThai", trangThai),
+                new SqlParameter("@MaPL", maPL)
+            };
+
+            DatabaseLayer.RunSql(sqlUpdate, updateParams);
+        }
+
+        public static void KhongDuyetPL(string maPL, string maNVDuyet, bool trangThai)
+        {
+            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, TrangThai = @TrangThai WHERE MaPhieuLoi = @MaPL";
+            SqlParameter[] updateParams =
+            {
+                new SqlParameter("@MaNVDuyet", maNVDuyet),
+                new SqlParameter("TrangThai", trangThai),
                 new SqlParameter("@MaPL", maPL)
             };
 

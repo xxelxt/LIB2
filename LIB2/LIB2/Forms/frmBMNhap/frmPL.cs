@@ -60,6 +60,7 @@ namespace LIB2.Forms
             listViewPL.Columns.Add("NgayLap", "Ngày lập");
             listViewPL.Columns.Add("NgayDuyet", "Ngày duyệt");
             listViewPL.Columns.Add("NguonNhap", "Nguồn nhập");
+            listViewPL.Columns.Add("TrangThai", "Trạng thái duyệt");
         }
 
         private void InitializeListViewCT()
@@ -104,6 +105,7 @@ namespace LIB2.Forms
             txtNgayDuyet.Enabled = false;
 
             btnDuyet.Enabled = false;
+            btnKhongDuyet.Enabled = false;
         }
 
         private void AdjustColumnWidth()
@@ -117,6 +119,7 @@ namespace LIB2.Forms
             int col6Width = 100;
             int col7Width = 100;
             int col8Width = 100;
+            int col9Width = 150;
 
             listViewPL.Columns[0].Width = col1Width;
             listViewPL.Columns[1].Width = col2Width;
@@ -127,6 +130,7 @@ namespace LIB2.Forms
             listViewPL.Columns[5].Width = col6Width;
             listViewPL.Columns[6].Width = col7Width;
             listViewPL.Columns[7].Width = col8Width;
+            listViewPL.Columns[8].Width = col9Width;
         }
 
         private void AdjustColumnWidthCT()
@@ -221,6 +225,19 @@ namespace LIB2.Forms
 
                 item.SubItems.Add(row["NguonNhap"].ToString());
 
+                string trangThai = "";
+                if (row["TrangThai"] != null && row["TrangThai"] != DBNull.Value)
+                {
+                    bool trangThaiValue = Convert.ToBoolean(row["TrangThai"]);
+                    trangThai = trangThaiValue ? "Đã duyệt" : "Không duyệt";
+                }
+                else
+                {
+                    trangThai = "";
+                }
+
+                item.SubItems.Add(trangThai);
+
                 listViewPL.Items.Add(item);
             }
 
@@ -310,9 +327,14 @@ namespace LIB2.Forms
                 btnHuy.Enabled = true;
                 btnIn.Enabled = true;
 
-                if (currentRole == UserRole.Admin && string.IsNullOrEmpty(txtMaNVDuyet.Text))
+                if (currentRole == UserRole.Admin)
                 {
-                    btnDuyet.Enabled = true;
+                    btnKhongDuyet.Enabled = true;
+
+                    if (string.IsNullOrEmpty(txtNgayDuyet.Text))
+                    {
+                        btnDuyet.Enabled = true;
+                    }
                 }
             }
             else
@@ -335,6 +357,7 @@ namespace LIB2.Forms
                 btnXoaTL.Enabled = false;
 
                 btnDuyet.Enabled = false;
+                btnKhongDuyet.Enabled = false;
             }
         }
 
@@ -643,7 +666,7 @@ namespace LIB2.Forms
 
             try
             {
-                PLDAL.DuyetPL(maPL, maNVDuyet, ngayDuyet);
+                PLDAL.DuyetPL(maPL, maNVDuyet, ngayDuyet, true);
 
                 Functions.HandleInfo("Duyệt phiếu lỗi thành công");
                 LoadData();
@@ -655,6 +678,28 @@ namespace LIB2.Forms
             catch (Exception ex)
             {
                 Functions.HandleError("Lỗi khi duyệt phiếu lỗi: " + ex.Message);
+            }
+        }
+
+        private void btnKhongDuyet_Click(object sender, EventArgs e)
+        {
+            string maNVDuyet = NhanVienDAL.GetMaNVByUsername(Username);
+            string maPL = txtMaPL.Text.Trim();
+
+            try
+            {
+                PLDAL.KhongDuyetPL(maPL, maNVDuyet, false);
+
+                Functions.HandleInfo("Không duyệt phiếu lỗi thành công");
+                LoadData();
+                LoadDataCT("");
+
+                ResetValues();
+                ResetValuesCT();
+            }
+            catch (Exception ex)
+            {
+                Functions.HandleError("Lỗi khi không duyệt phiếu lỗi: " + ex.Message);
             }
         }
 

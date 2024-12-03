@@ -207,5 +207,21 @@ namespace LIB2.DAL
 
             DatabaseLayer.RunSqlDel(sql, sqlParams);
         }
+
+        public static bool GetDatPhongByPhongCaSuDung(string phong, int caSuDung, DateTime TGDat)
+        {
+            string sql = "SELECT MaDP FROM " + TableName + " WHERE Phong = @Phong AND CaSuDung = @CaSuDung AND TGDat = @TGDat";
+
+            SqlParameter[] sqlParams =
+            {
+                new SqlParameter("@Phong", phong),
+                new SqlParameter("@CaSuDung", caSuDung),
+                new SqlParameter("@TGDat", TGDat)
+            };
+
+            DataTable dt = DatabaseLayer.GetDataToTable(sql, sqlParams);
+
+            return dt.Rows.Count > 0;
+        }
     }
 }

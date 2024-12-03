@@ -322,10 +322,10 @@
     <Compile Include="Forms\frmBaoCao.Designer.cs">
       <DependentUpon>frmBaoCao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmBMKiemKe\frmPYCBSEmail.cs">
+    <Compile Include="Forms\frmBMNhap\frmPYCBSEmail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmBMKiemKe\frmPYCBSEmail.Designer.cs">
+    <Compile Include="Forms\frmBMNhap\frmPYCBSEmail.Designer.cs">
       <DependentUpon>frmPYCBSEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmDatPhong.cs">
@@ -639,7 +639,7 @@
     <EmbeddedResource Include="Forms\frmBMKiemKe\frmPKK.resx">
       <DependentUpon>frmPKK.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmBMKiemKe\frmPYCBSEmail.resx">
+    <EmbeddedResource Include="Forms\frmBMNhap\frmPYCBSEmail.resx">
       <DependentUpon>frmPYCBSEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmBMNhap\frmPL.resx">

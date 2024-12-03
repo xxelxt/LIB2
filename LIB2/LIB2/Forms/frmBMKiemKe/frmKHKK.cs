@@ -51,6 +51,7 @@ namespace LIB2.Forms
             listViewKHKK.Columns.Add("NgayDuyet", "Ngày duyệt");
 
             listViewKHKK.Columns.Add("DuongDan", "Đường dẫn tới file");
+            listViewKHKK.Columns.Add("TrangThai", "Trạng thái duyệt");
         }
 
         private void frmKHKK_Load(object sender, EventArgs e)
@@ -73,6 +74,7 @@ namespace LIB2.Forms
             txtNgayDuyet.Enabled = false;
 
             btnDuyet.Enabled = false;
+            btnKhongDuyet.Enabled = false;
 
             btnAddFile.Enabled = false;
             btnOpenFile.Enabled = false;
@@ -91,6 +93,7 @@ namespace LIB2.Forms
             double col6Percentage = 0.1;
             double col7Percentage = 0.1;
             double col8Percentage = 0.2;
+            double col9Percentage = 0.15;
 
             int col1Width = (int)(totalWidth * col1Percentage);
             int col2Width = (int)(totalWidth * col2Percentage);
@@ -101,6 +104,7 @@ namespace LIB2.Forms
             int col6Width = (int)(totalWidth * col6Percentage);
             int col7Width = (int)(totalWidth * col7Percentage);
             int col8Width = (int)(totalWidth * col8Percentage);
+            int col9Width = (int)(totalWidth * col9Percentage);
 
             listViewKHKK.Columns[0].Width = col1Width;
             listViewKHKK.Columns[1].Width = col2Width;
@@ -111,6 +115,7 @@ namespace LIB2.Forms
             listViewKHKK.Columns[5].Width = col6Width;
             listViewKHKK.Columns[6].Width = col7Width;
             listViewKHKK.Columns[7].Width = col8Width;
+            listViewKHKK.Columns[8].Width = col9Width;
         }
 
         public void LoadData()
@@ -168,6 +173,19 @@ namespace LIB2.Forms
                 }
 
                 item.SubItems.Add(row["DuongDan"].ToString());
+
+                string trangThai = "";
+                if (row["TrangThai"] != null && row["TrangThai"] != DBNull.Value)
+                {
+                    bool trangThaiValue = Convert.ToBoolean(row["TrangThai"]);
+                    trangThai = trangThaiValue ? "Đã duyệt" : "Không duyệt";
+                }
+                else
+                {
+                    trangThai = "";
+                }
+
+                item.SubItems.Add(trangThai);
 
                 listViewKHKK.Items.Add(item);
             }
@@ -234,9 +252,14 @@ namespace LIB2.Forms
                 btnAddFile.Enabled = true;
                 btnOpenFile.Enabled = true;
 
-                if (currentRole == UserRole.Admin && string.IsNullOrEmpty(txtMaNVDuyet.Text))
+                if (currentRole == UserRole.Admin)
                 {
-                    btnDuyet.Enabled = true;
+                    btnKhongDuyet.Enabled = true;
+
+                    if (string.IsNullOrEmpty(txtNgayDuyet.Text))
+                    {
+                        btnDuyet.Enabled = true;
+                    }
                 }
             }
             else
@@ -249,6 +272,7 @@ namespace LIB2.Forms
                 btnIn.Enabled = false;
 
                 btnDuyet.Enabled = false;
+                btnKhongDuyet.Enabled = false;
 
                 btnAddFile.Enabled = false;
                 btnOpenFile.Enabled = false;
@@ -473,7 +497,7 @@ namespace LIB2.Forms
 
             try
             {
-                KHKKDAL.DuyetKHKK(maKHKK, maNVDuyet, ngayDuyet);
+                KHKKDAL.DuyetKHKK(maKHKK, maNVDuyet, ngayDuyet, true);
 
                 Functions.HandleInfo("Duyệt báo cáo thanh lọc thành công");
                 LoadData();
@@ -485,6 +509,28 @@ namespace LIB2.Forms
             catch (Exception ex)
             {
                 Functions.HandleError("Lỗi khi duyệt báo cáo thanh lọc: " + ex.Message);
+            }
+        }
+
+        private void btnKhongDuyet_Click(object sender, EventArgs e)
+        {
+            string maNVDuyet = NhanVienDAL.GetMaNVByUsername(Username);
+            string maKHKK = txtMaKHKK.Text.Trim();
+
+            try
+            {
+                KHKKDAL.KhongDuyetKHKK(maKHKK, maNVDuyet, false);
+
+                Functions.HandleInfo("Không duyệt báo cáo thanh lọc thành công");
+                LoadData();
+                ResetValues();
+
+                btnAddFile.Enabled = false;
+                btnOpenFile.Enabled = false;
+            }
+            catch (Exception ex)
+            {
+                Functions.HandleError("Lỗi khi không duyệt báo cáo thanh lọc: " + ex.Message);
             }
         }
 

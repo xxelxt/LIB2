@@ -51,6 +51,7 @@
             this.btnLuu = new MaterialSkin.Controls.MaterialButton();
             this.btnThem = new MaterialSkin.Controls.MaterialButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnKiemTraPhong = new MaterialSkin.Controls.MaterialButton();
             this.rdoKhongSD = new MaterialSkin.Controls.MaterialRadioButton();
             this.rdoCoSD = new MaterialSkin.Controls.MaterialRadioButton();
             this.cboCaSuDung = new MaterialSkin.Controls.MaterialComboBox();
@@ -79,13 +80,13 @@
             this.listViewDP.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listViewDP.FullRowSelect = true;
             this.listViewDP.HideSelection = false;
-            this.listViewDP.Location = new System.Drawing.Point(27, 269);
+            this.listViewDP.Location = new System.Drawing.Point(27, 290);
             this.listViewDP.MinimumSize = new System.Drawing.Size(400, 150);
             this.listViewDP.MouseLocation = new System.Drawing.Point(-1, -1);
             this.listViewDP.MouseState = MaterialSkin.MouseState.OUT;
             this.listViewDP.Name = "listViewDP";
             this.listViewDP.OwnerDraw = true;
-            this.listViewDP.Size = new System.Drawing.Size(571, 480);
+            this.listViewDP.Size = new System.Drawing.Size(571, 459);
             this.listViewDP.TabIndex = 187;
             this.listViewDP.UseCompatibleStateImageBehavior = false;
             this.listViewDP.View = System.Windows.Forms.View.Details;
@@ -538,6 +539,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnKiemTraPhong);
             this.groupBox1.Controls.Add(this.rdoKhongSD);
             this.groupBox1.Controls.Add(this.rdoCoSD);
             this.groupBox1.Controls.Add(this.cboCaSuDung);
@@ -552,9 +554,36 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Location = new System.Drawing.Point(27, 24);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(571, 230);
+            this.groupBox1.Size = new System.Drawing.Size(571, 249);
             this.groupBox1.TabIndex = 180;
             this.groupBox1.TabStop = false;
+            // 
+            // btnKiemTraPhong
+            // 
+            this.btnKiemTraPhong.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnKiemTraPhong.AutoSize = false;
+            this.btnKiemTraPhong.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnKiemTraPhong.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnKiemTraPhong.Depth = 0;
+            this.btnKiemTraPhong.DrawShadows = false;
+            this.btnKiemTraPhong.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKiemTraPhong.HighEmphasis = true;
+            this.btnKiemTraPhong.Icon = null;
+            this.btnKiemTraPhong.Location = new System.Drawing.Point(401, 188);
+            this.btnKiemTraPhong.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnKiemTraPhong.MaximumSize = new System.Drawing.Size(0, 36);
+            this.btnKiemTraPhong.MinimumSize = new System.Drawing.Size(80, 36);
+            this.btnKiemTraPhong.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnKiemTraPhong.Name = "btnKiemTraPhong";
+            this.btnKiemTraPhong.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnKiemTraPhong.Size = new System.Drawing.Size(147, 36);
+            this.btnKiemTraPhong.TabIndex = 172;
+            this.btnKiemTraPhong.Text = "Kiểm tra phòng";
+            this.btnKiemTraPhong.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnKiemTraPhong.UseAccentColor = false;
+            this.btnKiemTraPhong.UseVisualStyleBackColor = true;
+            this.btnKiemTraPhong.Click += new System.EventHandler(this.btnKiemTraPhong_Click);
             // 
             // rdoKhongSD
             // 
@@ -562,7 +591,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.rdoKhongSD.AutoSize = true;
             this.rdoKhongSD.Depth = 0;
-            this.rdoKhongSD.Location = new System.Drawing.Point(405, 139);
+            this.rdoKhongSD.Location = new System.Drawing.Point(405, 133);
             this.rdoKhongSD.Margin = new System.Windows.Forms.Padding(0);
             this.rdoKhongSD.MouseLocation = new System.Drawing.Point(-1, -1);
             this.rdoKhongSD.MouseState = MaterialSkin.MouseState.HOVER;
@@ -850,5 +879,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
+        private MaterialSkin.Controls.MaterialButton btnKiemTraPhong;
     }
 }

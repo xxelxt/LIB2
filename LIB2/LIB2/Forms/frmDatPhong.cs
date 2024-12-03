@@ -359,6 +359,12 @@ namespace LIB2.Forms
 
                     bool trangThai = rdoCoSD.Checked;
 
+                    if (DatPhongDAL.GetDatPhongByPhongCaSuDung(phong, caSuDung, TGDat))
+                    {
+                        Functions.HandleWarning($"Phòng {phong} đã được đặt vào ca {caSuDung}, ngày {TGDat:dd/MM/yyyy}");
+                        return;
+                    }
+
                     try
                     {
                         DatPhongDAL.UpdateDatPhong(maDP, TGDat, phong, caSuDung, trangThai);
@@ -620,6 +626,36 @@ namespace LIB2.Forms
                     Functions.HandleError("Lỗi khi tải thông tin đặt phòng: " + ex.Message);
                     ResetThongTinBanDoc();
                 }
+            }
+        }
+
+        private void CheckPhong(string phong, int caSuDung, DateTime TGDat)
+        {
+            try
+            {
+                if (DatPhongDAL.GetDatPhongByPhongCaSuDung(phong, caSuDung, TGDat))
+                {
+                    Functions.HandleWarning($"Phòng {phong} đã được đặt vào ca {caSuDung}, ngày {TGDat:dd/MM/yyyy}");
+                }
+                else
+                {
+                    Functions.HandleInfo($"Phòng {phong} vẫn còn trống trong ca {caSuDung}, ngày {TGDat:dd/MM/yyyy}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Functions.HandleError("Lỗi khi kiểm tra phòng: " + ex.Message);
+            }
+        }
+
+        private void btnKiemTraPhong_Click(object sender, EventArgs e)
+        {
+            string phong = cboPhong.Text.Trim();
+            string caSuDung = cboCaSuDung.Text.Trim();
+
+            if (!string.IsNullOrEmpty(phong) && !string.IsNullOrEmpty(caSuDung) && DateTime.TryParse(txtTGDat.Text.Trim(), out DateTime TGDat))
+            {
+                CheckPhong(phong, Convert.ToInt32(caSuDung), TGDat);
             }
         }
     }

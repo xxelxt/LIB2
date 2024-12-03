@@ -11,7 +11,7 @@ namespace LIB2.DAL
 
         public static DataTable GetAllKHKK()
         {
-            string sql = $@"SELECT P.MaKHKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.DuongDan 
+            string sql = $@"SELECT P.MaKHKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.DuongDan, P.TrangThai 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
                             LEFT JOIN NhanVien NV2 ON P.MaNVDuyet = NV2.MaNV";
@@ -21,7 +21,7 @@ namespace LIB2.DAL
 
         public static DataTable GetThongTinKHKK(string maKHKK)
         {
-            string sql = $@"SELECT P.MaKHKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.DuongDan 
+            string sql = $@"SELECT P.MaKHKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.DuongDan, P.TrangThai 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
                             L JOIN NhanVien NV2 ON P.MaNVDuyet = NV2.MaNV 
@@ -36,7 +36,7 @@ namespace LIB2.DAL
 
         public static DataTable GetKHKKBySearch(string searchOption, string searchKeyword)
         {
-            string sql = $@"SELECT P.MaKHKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.DuongDan 
+            string sql = $@"SELECT P.MaKHKiemKe, P.MaNVLap, NV1.TenNV AS TenNVLap, P.MaNVDuyet, NV2.TenNV AS TenNVDuyet, P.NgayLap, P.NgayDuyet, P.DuongDan, P.TrangThai 
                             FROM {TableName} P 
                             INNER JOIN NhanVien NV1 ON P.MaNVLap = NV1.MaNV 
                             LEFT JOIN NhanVien NV2 ON P.MaNVDuyet = NV2.MaNV ";
@@ -164,13 +164,27 @@ namespace LIB2.DAL
             DatabaseLayer.RunSql(sqlUpdate, updateParams);
         }
 
-        public static void DuyetKHKK(string maKHKK, string maNVDuyet, DateTime ngayDuyet)
+        public static void DuyetKHKK(string maKHKK, string maNVDuyet, DateTime ngayDuyet, bool trangThai)
         {
-            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, NgayDuyet = @NgayDuyet WHERE MaKHKiemKe = @MaKHKK";
+            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, NgayDuyet = @NgayDuyet, TrangThai = @TrangThai WHERE MaKHKiemKe = @MaKHKK";
             SqlParameter[] updateParams =
             {
                 new SqlParameter("@MaNVDuyet", maNVDuyet),
                 new SqlParameter("@NgayDuyet", ngayDuyet),
+                new SqlParameter("TrangThai", trangThai),
+                new SqlParameter("@MaKHKK", maKHKK)
+            };
+
+            DatabaseLayer.RunSql(sqlUpdate, updateParams);
+        }
+
+        public static void KhongDuyetKHKK(string maKHKK, string maNVDuyet, bool trangThai)
+        {
+            string sqlUpdate = "UPDATE " + TableName + " SET MaNVDuyet = @MaNVDuyet, TrangThai = @TrangThai WHERE MaKHKiemKe = @MaKHKK";
+            SqlParameter[] updateParams =
+            {
+                new SqlParameter("@MaNVDuyet", maNVDuyet),
+                new SqlParameter("TrangThai", trangThai),
                 new SqlParameter("@MaKHKK", maKHKK)
             };
 

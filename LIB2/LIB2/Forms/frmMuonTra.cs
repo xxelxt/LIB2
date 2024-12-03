@@ -16,6 +16,7 @@ namespace LIB2.Forms
 
         public bool isAdding = false;
         public bool isEditing = false;
+        public int soLuongTong = 0;
 
         public frmMuonTra()
         {
@@ -99,10 +100,13 @@ namespace LIB2.Forms
 
             if (!string.IsNullOrEmpty(maBD))
             {
-                if (PhatDAL.GetStatusPhatByMaBanDoc(maBD))
+                if (isAdding)
                 {
-                    Functions.HandleWarning("Bạn đọc chưa hoàn thành phạt");
-                    return;
+                    if (PhatDAL.GetStatusPhatByMaBanDoc(maBD))
+                    {
+                        Functions.HandleWarning("Bạn đọc chưa hoàn thành phạt");
+                        return;
+                    }
                 }
 
                 try
@@ -338,6 +342,7 @@ namespace LIB2.Forms
             txtNgayMuon.Text = "";
             txtNgayTra.Text = "";
             txtMaBD.Text = "";
+            soLuongTong = 0;
         }
 
         private void ResetValuesCT()
@@ -399,6 +404,30 @@ namespace LIB2.Forms
                 return false;
             }
 
+            DateTime ngayMuon;
+            DateTime ngayTra;
+
+            if (!DateTime.TryParse(txtNgayMuon.Text, out ngayMuon))
+            {
+                Functions.HandleWarning("Ngày mượn không hợp lệ");
+                txtNgayMuon.Focus();
+                return false;
+            }
+
+            if (!DateTime.TryParse(txtNgayTra.Text, out ngayTra))
+            {
+                Functions.HandleWarning("Ngày trả không hợp lệ");
+                txtNgayTra.Focus();
+                return false;
+            }
+
+            if (ngayTra < ngayMuon)
+            {
+                Functions.HandleWarning("Ngày trả phải lớn hơn hoặc bằng ngày mượn");
+                txtNgayTra.Focus();
+                return false;
+            }
+
             return true;
         }
 
@@ -429,6 +458,13 @@ namespace LIB2.Forms
             {
                 Functions.HandleWarning("Bạn phải chọn tình trạng trả sách");
                 rdoChuaTra.Focus();
+                return false;
+            }
+
+            if (Convert.ToInt32(txtSoLuong.Text) > 2)
+            {
+                Functions.HandleWarning("Số lượng mỗi cuốn sách được mượn không được quá 2 cuốn sách");
+                txtSoLuong.Focus();
                 return false;
             }
 
@@ -600,9 +636,18 @@ namespace LIB2.Forms
                     return;
                 }
 
+                soLuongTong += soLuong;
+                if (soLuongTong > 3)
+                {
+                    Functions.HandleWarning("Mỗi lần mượn chỉ được mượn tối đa 3 cuốn sách");
+                    soLuongTong -= soLuong;
+                    return;
+                }
+
                 try
                 {
                     MuonTraDAL.InsertSachCTMuonTra(maMT, maSach, soLuong, tinhTrang, ghiChu);
+
                     Functions.HandleInfo("Thêm chi tiết mượn trả thành công");
 
                     if (tinhTrang)
@@ -675,6 +720,8 @@ namespace LIB2.Forms
             {
                 if (Functions.HandleQuestion("Bạn có muốn xóa không?"))
                 {
+                    soLuongTong -= soLuong;
+
                     try
                     {
                         MuonTraDAL.DeleteSachCTMuonTra(maMT, maSach);

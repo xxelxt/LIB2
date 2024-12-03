@@ -71,6 +71,7 @@
             this.txtNgayLap = new MaterialSkin.Controls.MaterialMaskedTextBox();
             this.listViewPYCBS = new MaterialSkin.Controls.MaterialListView();
             this.btnEmail = new MaterialSkin.Controls.MaterialButton();
+            this.btnKhongDuyet = new MaterialSkin.Controls.MaterialButton();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -613,7 +614,7 @@
             this.btnDuyet.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDuyet.HighEmphasis = true;
             this.btnDuyet.Icon = null;
-            this.btnDuyet.Location = new System.Drawing.Point(665, 755);
+            this.btnDuyet.Location = new System.Drawing.Point(591, 755);
             this.btnDuyet.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDuyet.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnDuyet.MinimumSize = new System.Drawing.Size(80, 36);
@@ -638,7 +639,7 @@
             this.btnIn.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.HighEmphasis = true;
             this.btnIn.Icon = null;
-            this.btnIn.Location = new System.Drawing.Point(558, 755);
+            this.btnIn.Location = new System.Drawing.Point(484, 755);
             this.btnIn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnIn.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnIn.MinimumSize = new System.Drawing.Size(80, 36);
@@ -709,7 +710,7 @@
             this.btnHuy.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.HighEmphasis = true;
             this.btnHuy.Icon = null;
-            this.btnHuy.Location = new System.Drawing.Point(450, 755);
+            this.btnHuy.Location = new System.Drawing.Point(376, 755);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnHuy.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnHuy.MinimumSize = new System.Drawing.Size(80, 36);
@@ -734,7 +735,7 @@
             this.btnLuu.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.HighEmphasis = true;
             this.btnLuu.Icon = null;
-            this.btnLuu.Location = new System.Drawing.Point(346, 755);
+            this.btnLuu.Location = new System.Drawing.Point(272, 755);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLuu.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnLuu.MinimumSize = new System.Drawing.Size(80, 36);
@@ -759,7 +760,7 @@
             this.btnXoa.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.HighEmphasis = true;
             this.btnXoa.Icon = null;
-            this.btnXoa.Location = new System.Drawing.Point(244, 755);
+            this.btnXoa.Location = new System.Drawing.Point(170, 755);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnXoa.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnXoa.MinimumSize = new System.Drawing.Size(80, 36);
@@ -784,7 +785,7 @@
             this.btnThem.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.HighEmphasis = true;
             this.btnThem.Icon = null;
-            this.btnThem.Location = new System.Drawing.Point(145, 755);
+            this.btnThem.Location = new System.Drawing.Point(71, 755);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnThem.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnThem.MinimumSize = new System.Drawing.Size(80, 36);
@@ -1100,7 +1101,7 @@
             this.btnEmail.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEmail.HighEmphasis = true;
             this.btnEmail.Icon = null;
-            this.btnEmail.Location = new System.Drawing.Point(771, 755);
+            this.btnEmail.Location = new System.Drawing.Point(856, 755);
             this.btnEmail.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnEmail.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnEmail.MinimumSize = new System.Drawing.Size(80, 36);
@@ -1115,12 +1116,38 @@
             this.btnEmail.UseVisualStyleBackColor = true;
             this.btnEmail.Click += new System.EventHandler(this.btnEmail_Click);
             // 
+            // btnKhongDuyet
+            // 
+            this.btnKhongDuyet.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnKhongDuyet.AutoSize = false;
+            this.btnKhongDuyet.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnKhongDuyet.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnKhongDuyet.Depth = 0;
+            this.btnKhongDuyet.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhongDuyet.HighEmphasis = true;
+            this.btnKhongDuyet.Icon = null;
+            this.btnKhongDuyet.Location = new System.Drawing.Point(697, 755);
+            this.btnKhongDuyet.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnKhongDuyet.MaximumSize = new System.Drawing.Size(0, 36);
+            this.btnKhongDuyet.MinimumSize = new System.Drawing.Size(80, 36);
+            this.btnKhongDuyet.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnKhongDuyet.Name = "btnKhongDuyet";
+            this.btnKhongDuyet.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnKhongDuyet.Size = new System.Drawing.Size(132, 36);
+            this.btnKhongDuyet.TabIndex = 252;
+            this.btnKhongDuyet.Text = "Không duyệt";
+            this.btnKhongDuyet.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnKhongDuyet.UseAccentColor = false;
+            this.btnKhongDuyet.UseVisualStyleBackColor = true;
+            this.btnKhongDuyet.Click += new System.EventHandler(this.btnKhongDuyet_Click);
+            // 
             // frmPYCBS
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1024, 819);
+            this.Controls.Add(this.btnKhongDuyet);
             this.Controls.Add(this.btnEmail);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.listViewCTPYCBS);
@@ -1194,5 +1221,6 @@
         private MaterialSkin.Controls.MaterialComboBox cboMDYC;
         private MaterialSkin.Controls.MaterialTextBox2 txtSoLuong;
         private MaterialSkin.Controls.MaterialButton btnEmail;
+        private MaterialSkin.Controls.MaterialButton btnKhongDuyet;
     }
 }

@@ -66,6 +66,7 @@
             this.btnLuu = new MaterialSkin.Controls.MaterialButton();
             this.btnThem = new MaterialSkin.Controls.MaterialButton();
             this.btnXoa = new MaterialSkin.Controls.MaterialButton();
+            this.btnKhongDuyet = new MaterialSkin.Controls.MaterialButton();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -216,7 +217,7 @@
             this.txtDonGia.SelectionLength = 0;
             this.txtDonGia.SelectionStart = 0;
             this.txtDonGia.ShortcutsEnabled = true;
-            this.txtDonGia.Size = new System.Drawing.Size(149, 48);
+            this.txtDonGia.Size = new System.Drawing.Size(132, 48);
             this.txtDonGia.TabIndex = 152;
             this.txtDonGia.TabStop = false;
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -569,7 +570,7 @@
             this.txtTenTL.SelectionLength = 0;
             this.txtTenTL.SelectionStart = 0;
             this.txtTenTL.ShortcutsEnabled = true;
-            this.txtTenTL.Size = new System.Drawing.Size(299, 48);
+            this.txtTenTL.Size = new System.Drawing.Size(282, 48);
             this.txtTenTL.TabIndex = 148;
             this.txtTenTL.TabStop = false;
             this.txtTenTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -743,7 +744,7 @@
             this.txtPAXuLy.SelectionLength = 0;
             this.txtPAXuLy.SelectionStart = 0;
             this.txtPAXuLy.ShortcutsEnabled = true;
-            this.txtPAXuLy.Size = new System.Drawing.Size(299, 48);
+            this.txtPAXuLy.Size = new System.Drawing.Size(282, 48);
             this.txtPAXuLy.TabIndex = 156;
             this.txtPAXuLy.TabStop = false;
             this.txtPAXuLy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -790,7 +791,7 @@
             this.txtLyDoTL.SelectionLength = 0;
             this.txtLyDoTL.SelectionStart = 0;
             this.txtLyDoTL.ShortcutsEnabled = true;
-            this.txtLyDoTL.Size = new System.Drawing.Size(299, 48);
+            this.txtLyDoTL.Size = new System.Drawing.Size(282, 48);
             this.txtLyDoTL.TabIndex = 154;
             this.txtLyDoTL.TabStop = false;
             this.txtLyDoTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -823,7 +824,7 @@
             this.txtMaTL.SelectionLength = 0;
             this.txtMaTL.SelectionStart = 0;
             this.txtMaTL.ShortcutsEnabled = true;
-            this.txtMaTL.Size = new System.Drawing.Size(299, 48);
+            this.txtMaTL.Size = new System.Drawing.Size(282, 48);
             this.txtMaTL.TabIndex = 146;
             this.txtMaTL.TabStop = false;
             this.txtMaTL.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -866,7 +867,7 @@
             this.btnDuyet.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDuyet.HighEmphasis = true;
             this.btnDuyet.Icon = null;
-            this.btnDuyet.Location = new System.Drawing.Point(734, 755);
+            this.btnDuyet.Location = new System.Drawing.Point(657, 755);
             this.btnDuyet.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnDuyet.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnDuyet.MinimumSize = new System.Drawing.Size(80, 36);
@@ -891,7 +892,7 @@
             this.btnIn.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIn.HighEmphasis = true;
             this.btnIn.Icon = null;
-            this.btnIn.Location = new System.Drawing.Point(627, 755);
+            this.btnIn.Location = new System.Drawing.Point(550, 755);
             this.btnIn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnIn.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnIn.MinimumSize = new System.Drawing.Size(80, 36);
@@ -916,7 +917,7 @@
             this.btnHuy.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHuy.HighEmphasis = true;
             this.btnHuy.Icon = null;
-            this.btnHuy.Location = new System.Drawing.Point(519, 755);
+            this.btnHuy.Location = new System.Drawing.Point(442, 755);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnHuy.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnHuy.MinimumSize = new System.Drawing.Size(80, 36);
@@ -941,7 +942,7 @@
             this.btnLuu.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.HighEmphasis = true;
             this.btnLuu.Icon = null;
-            this.btnLuu.Location = new System.Drawing.Point(415, 755);
+            this.btnLuu.Location = new System.Drawing.Point(338, 755);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLuu.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnLuu.MinimumSize = new System.Drawing.Size(80, 36);
@@ -966,7 +967,7 @@
             this.btnThem.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.HighEmphasis = true;
             this.btnThem.Icon = null;
-            this.btnThem.Location = new System.Drawing.Point(214, 755);
+            this.btnThem.Location = new System.Drawing.Point(137, 755);
             this.btnThem.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnThem.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnThem.MinimumSize = new System.Drawing.Size(80, 36);
@@ -991,7 +992,7 @@
             this.btnXoa.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.HighEmphasis = true;
             this.btnXoa.Icon = null;
-            this.btnXoa.Location = new System.Drawing.Point(313, 755);
+            this.btnXoa.Location = new System.Drawing.Point(236, 755);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnXoa.MaximumSize = new System.Drawing.Size(0, 36);
             this.btnXoa.MinimumSize = new System.Drawing.Size(80, 36);
@@ -1006,12 +1007,38 @@
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // btnKhongDuyet
+            // 
+            this.btnKhongDuyet.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnKhongDuyet.AutoSize = false;
+            this.btnKhongDuyet.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnKhongDuyet.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnKhongDuyet.Depth = 0;
+            this.btnKhongDuyet.Font = new System.Drawing.Font("Roboto", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKhongDuyet.HighEmphasis = true;
+            this.btnKhongDuyet.Icon = null;
+            this.btnKhongDuyet.Location = new System.Drawing.Point(765, 755);
+            this.btnKhongDuyet.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnKhongDuyet.MaximumSize = new System.Drawing.Size(0, 36);
+            this.btnKhongDuyet.MinimumSize = new System.Drawing.Size(80, 36);
+            this.btnKhongDuyet.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnKhongDuyet.Name = "btnKhongDuyet";
+            this.btnKhongDuyet.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnKhongDuyet.Size = new System.Drawing.Size(132, 36);
+            this.btnKhongDuyet.TabIndex = 230;
+            this.btnKhongDuyet.Text = "Không duyệt";
+            this.btnKhongDuyet.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnKhongDuyet.UseAccentColor = false;
+            this.btnKhongDuyet.UseVisualStyleBackColor = true;
+            this.btnKhongDuyet.Click += new System.EventHandler(this.btnKhongDuyet_Click);
+            // 
             // frmDMTL
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.AutoScroll = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1024, 819);
+            this.Controls.Add(this.btnKhongDuyet);
             this.Controls.Add(this.btnDuyet);
             this.Controls.Add(this.btnIn);
             this.Controls.Add(this.btnHuy);
@@ -1078,5 +1105,6 @@
         private MaterialSkin.Controls.MaterialButton btnXoa;
         private MaterialSkin.Controls.MaterialButton btnXoaTL;
         private MaterialSkin.Controls.MaterialButton btnThemTL;
+        private MaterialSkin.Controls.MaterialButton btnKhongDuyet;
     }
 }

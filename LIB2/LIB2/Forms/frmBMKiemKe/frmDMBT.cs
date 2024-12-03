@@ -631,7 +631,7 @@ namespace LIB2.Forms
                     {
                         DMBTDAL.DeleteTaiLieuCTDMBT(maDMBT, maTL);
 
-                        counterTL += soLuong;
+                        counterTL -= soLuong;
                         txtTongSoTL.Text = counterTL.ToString();
                         counterTT -= soLuong * donGia;
                         txtTongTienBT.Text = counterTL.ToString();
