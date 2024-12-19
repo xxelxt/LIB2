@@ -198,7 +198,7 @@ namespace LIB2.Database
             {
                 if (ex.Number == 547)
                 {
-                    MessageBox.Show("Dữ liệu đang được dùng, không thể xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    //MessageBox.Show("Dữ liệu đang được dùng, không thể xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
                 else
                 {
@@ -217,7 +217,7 @@ namespace LIB2.Database
             {
                 if (ex.Number == 547)
                 {
-                    MessageBox.Show("Dữ liệu đang được dùng, không thể xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    //MessageBox.Show("Dữ liệu đang được dùng, không thể xóa", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 }
                 else
                 {

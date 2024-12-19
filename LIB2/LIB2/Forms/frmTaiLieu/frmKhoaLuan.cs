@@ -23,8 +23,8 @@ namespace LIB2.Forms
             InitializeListView();
             LoadData();
 
-            string fillComboSqlNN = "SELECT * FROM NgonNgu;";
-            DatabaseLayer.FillCombo(fillComboSqlNN, cboMaNganh, "MaNN", "TenNN");
+            string fillComboSqlNN = "SELECT * FROM Nganh;";
+            DatabaseLayer.FillCombo(fillComboSqlNN, cboMaNganh, "MaNganh", "TenNganh");
 
             string fillComboSqlKho = "SELECT * FROM Kho;";
             DatabaseLayer.FillCombo(fillComboSqlKho, cboMaKho, "MaKho", "TenKho");

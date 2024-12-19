@@ -101,7 +101,7 @@ namespace LIB2.DAL
             }
 
             string sqlUpdate = @"
-                UPDATE TapChi 
+                UPDATE TapChiBao 
                 SET 
                     TieuDe = @TieuDe, 
                     NgayXB = @NgayXB, 

@@ -896,7 +896,7 @@
             this.txtTenTG10.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenTG10.TrailingIcon = null;
             this.txtTenTG10.UseSystemPasswordChar = false;
-            this.txtTenTG10.TextChanged += new System.EventHandler(this.txtTenTG_TextChanged);
+            this.txtTenTG10.TextChanged += new System.EventHandler(this.txtTenTG10_TextChanged);
             // 
             // materialLabel22
             // 
@@ -975,7 +975,7 @@
             this.txtTenTG9.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenTG9.TrailingIcon = null;
             this.txtTenTG9.UseSystemPasswordChar = false;
-            this.txtTenTG9.TextChanged += new System.EventHandler(this.txtTenTG_TextChanged);
+            this.txtTenTG9.TextChanged += new System.EventHandler(this.txtTenTG9_TextChanged);
             // 
             // materialLabel17
             // 
@@ -1054,7 +1054,7 @@
             this.txtTenTG8.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenTG8.TrailingIcon = null;
             this.txtTenTG8.UseSystemPasswordChar = false;
-            this.txtTenTG8.TextChanged += new System.EventHandler(this.txtTenTG_TextChanged);
+            this.txtTenTG8.TextChanged += new System.EventHandler(this.txtTenTG8_TextChanged);
             // 
             // materialLabel18
             // 
@@ -1133,7 +1133,7 @@
             this.txtTenTG7.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenTG7.TrailingIcon = null;
             this.txtTenTG7.UseSystemPasswordChar = false;
-            this.txtTenTG7.TextChanged += new System.EventHandler(this.txtTenTG_TextChanged);
+            this.txtTenTG7.TextChanged += new System.EventHandler(this.txtTenTG7_TextChanged);
             // 
             // materialLabel19
             // 
@@ -1212,7 +1212,7 @@
             this.txtTenTG6.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenTG6.TrailingIcon = null;
             this.txtTenTG6.UseSystemPasswordChar = false;
-            this.txtTenTG6.TextChanged += new System.EventHandler(this.txtTenTG_TextChanged);
+            this.txtTenTG6.TextChanged += new System.EventHandler(this.txtTenTG6_TextChanged);
             // 
             // materialLabel20
             // 
@@ -1291,7 +1291,7 @@
             this.txtTenTG5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenTG5.TrailingIcon = null;
             this.txtTenTG5.UseSystemPasswordChar = false;
-            this.txtTenTG5.TextChanged += new System.EventHandler(this.txtTenTG_TextChanged);
+            this.txtTenTG5.TextChanged += new System.EventHandler(this.txtTenTG5_TextChanged);
             // 
             // materialLabel16
             // 
@@ -1370,7 +1370,7 @@
             this.txtTenTG4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenTG4.TrailingIcon = null;
             this.txtTenTG4.UseSystemPasswordChar = false;
-            this.txtTenTG4.TextChanged += new System.EventHandler(this.txtTenTG_TextChanged);
+            this.txtTenTG4.TextChanged += new System.EventHandler(this.txtTenTG4_TextChanged);
             // 
             // materialLabel15
             // 
@@ -1449,7 +1449,7 @@
             this.txtTenTG3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenTG3.TrailingIcon = null;
             this.txtTenTG3.UseSystemPasswordChar = false;
-            this.txtTenTG3.TextChanged += new System.EventHandler(this.txtTenTG_TextChanged);
+            this.txtTenTG3.TextChanged += new System.EventHandler(this.txtTenTG3_TextChanged);
             // 
             // materialLabel14
             // 
@@ -1528,7 +1528,7 @@
             this.txtTenTG2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenTG2.TrailingIcon = null;
             this.txtTenTG2.UseSystemPasswordChar = false;
-            this.txtTenTG2.TextChanged += new System.EventHandler(this.txtTenTG_TextChanged);
+            this.txtTenTG2.TextChanged += new System.EventHandler(this.txtTenTG2_TextChanged);
             // 
             // materialLabel13
             // 
@@ -1607,7 +1607,7 @@
             this.txtTenTG1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtTenTG1.TrailingIcon = null;
             this.txtTenTG1.UseSystemPasswordChar = false;
-            this.txtTenTG1.TextChanged += new System.EventHandler(this.txtTenTG_TextChanged);
+            this.txtTenTG1.TextChanged += new System.EventHandler(this.txtTenTG1_TextChanged);
             // 
             // cboSoLuong
             // 

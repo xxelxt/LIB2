@@ -180,7 +180,7 @@ namespace LIB2.DAL
                     NamXB = @NamXB, 
                     SoTrang = @SoTrang, 
                     SoLuong = @SoLuong, 
-                    Gia = @Gia
+                    DonGia = @Gia
                 WHERE MaSach = @MaSach";
 
             SqlParameter[] updateParams = {
@@ -202,7 +202,7 @@ namespace LIB2.DAL
 
         public static void DeleteSach(string maSach)
         {
-            string sqlDelete = "DELETE FROM " + TableName + " WHERE MaSach = @MaSach";
+            string sqlDelete = "DELETE FROM TacGiaSach WHERE MaSach = @MaSach";
             SqlParameter[] deleteParams = { new SqlParameter("@MaSach", maSach) };
 
             int rowsAffected = DatabaseLayer.RunSqlDelWithResult(sqlDelete, deleteParams);

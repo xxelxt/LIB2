@@ -323,7 +323,11 @@ namespace LIB2
         {
             if (Drawer != null && Drawer.BaseTabControl != null)
             {
-                // Danh sách tab sẽ ẩn với vai trò nhân viên
+                this.Drawer.HideTabPage(tabPageBC);
+                this.Drawer.HideTabPage(tabPageBD);
+                this.Drawer.HideTabPage(tabPageNV);
+                this.Drawer.HideTabPage(tabPageKho);
+                this.Drawer.HideTabPage(tabPageTTK);
             }
         }
 
@@ -331,7 +335,11 @@ namespace LIB2
         {
             if (Drawer != null && Drawer.BaseTabControl != null)
             {
-                // Ngược với danh sách trên
+                this.Drawer.ShowTabPage(tabPageBC);
+                this.Drawer.ShowTabPage(tabPageBD);
+                this.Drawer.ShowTabPage(tabPageNV);
+                this.Drawer.ShowTabPage(tabPageKho);
+                this.Drawer.ShowTabPage(tabPageTTK);
             }
         }
 

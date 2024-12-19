@@ -4,6 +4,7 @@ using LIB2.Database;
 using MaterialSkin.Controls;
 using System;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text.RegularExpressions;
@@ -66,6 +67,18 @@ namespace LIB2.Forms
             cboSoLuong.SelectedItem = "Mặc định";
             chkSoLuong.Checked = false;
             cboSoLuong.Enabled = false;
+
+            for (int i = 1; i <= 10; i++)
+            {
+                string textBoxName = $"txtMaTG{i}";
+                var materialTextBox = this.Controls.Find(textBoxName, true).FirstOrDefault() as MaterialSkin.Controls.MaterialTextBox2;
+
+                if (materialTextBox != null)
+                {
+                    materialTextBox.Enabled = false;
+                }
+            }
+
         }
 
         private void InitializeListView()
@@ -207,11 +220,12 @@ namespace LIB2.Forms
                 item.SubItems.Add(row["MaNganh"].ToString());
                 item.SubItems.Add(row["MaLV"].ToString());
 
+                item.SubItems.Add(row["NamXB"].ToString());
                 item.SubItems.Add(row["SoTrang"].ToString());
                 item.SubItems.Add(row["SoLuong"].ToString());
                 item.SubItems.Add(row["DonGia"].ToString());
 
-                item.SubItems.Add(row["MaLoai"].ToString());
+                item.SubItems.Add(row["MaLoaiAP"].ToString());
 
                 listViewTL.Items.Add(item);
             }
@@ -284,8 +298,8 @@ namespace LIB2.Forms
 
             for (int i = 0; i < maxFields; i++)
             {
-                TextBox txtMaTG = this.Controls.Find($"txtMaTG{i + 1}", true).FirstOrDefault() as TextBox;
-                TextBox txtTenTG = this.Controls.Find($"txtTenTG{i + 1}", true).FirstOrDefault() as TextBox;
+                var txtMaTG = this.Controls.Find($"txtMaTG{i + 1}", true).FirstOrDefault() as MaterialSkin.Controls.MaterialTextBox2;
+                var txtTenTG = this.Controls.Find($"txtTenTG{i + 1}", true).FirstOrDefault() as MaterialSkin.Controls.MaterialTextBox2;
 
                 if (txtMaTG != null && txtTenTG != null)
                 {
@@ -327,8 +341,8 @@ namespace LIB2.Forms
         {
             for (int i = 1; i <= 10; i++)
             {
-                TextBox txtMaTG = this.Controls.Find($"txtMaTG{i}", true).FirstOrDefault() as TextBox;
-                TextBox txtTenTG = this.Controls.Find($"txtTenTG{i}", true).FirstOrDefault() as TextBox;
+                MaterialTextBox2 txtMaTG = this.Controls.Find($"txtMaTG{i}", true).FirstOrDefault() as MaterialTextBox2;
+                MaterialTextBox2 txtTenTG = this.Controls.Find($"txtTenTG{i}", true).FirstOrDefault() as MaterialTextBox2;
 
                 if (txtMaTG != null) txtMaTG.Text = string.Empty;
                 if (txtTenTG != null) txtTenTG.Text = string.Empty;
@@ -481,8 +495,8 @@ namespace LIB2.Forms
 
                     for (int i = 1; i <= 10; i++)
                     {
-                        TextBox txtMaTG = this.Controls.Find($"txtMaTG{i}", true).FirstOrDefault() as TextBox;
-                        TextBox txtTenTG = this.Controls.Find($"txtTenTG{i}", true).FirstOrDefault() as TextBox;
+                        MaterialTextBox2 txtMaTG = this.Controls.Find($"txtMaTG{i}", true).FirstOrDefault() as MaterialTextBox2;
+                        MaterialTextBox2 txtTenTG = this.Controls.Find($"txtTenTG{i}", true).FirstOrDefault() as MaterialTextBox2;
 
                         if (txtMaTG != null && txtTenTG != null && !string.IsNullOrWhiteSpace(txtMaTG.Text))
                         {
@@ -557,8 +571,8 @@ namespace LIB2.Forms
 
                     for (int i = 1; i <= 10; i++)
                     {
-                        TextBox txtMaTG = this.Controls.Find($"txtMaTG{i}", true).FirstOrDefault() as TextBox;
-                        TextBox txtTenTG = this.Controls.Find($"txtTenTG{i}", true).FirstOrDefault() as TextBox;
+                        MaterialTextBox2 txtMaTG = this.Controls.Find($"txtMaTG{i}", true).FirstOrDefault() as MaterialTextBox2;
+                        MaterialTextBox2 txtTenTG = this.Controls.Find($"txtTenTG{i}", true).FirstOrDefault() as MaterialTextBox2;
 
                         if (txtMaTG != null && txtTenTG != null && !string.IsNullOrWhiteSpace(txtMaTG.Text))
                         {
@@ -689,32 +703,6 @@ namespace LIB2.Forms
             }
         }
 
-        private void txtTenTG_TextChanged(object sender, EventArgs e)
-        {
-            TextBox currentTextBox = sender as TextBox;
-
-            if (currentTextBox != null)
-            {
-                string tenTG = currentTextBox.Text.Trim();
-
-                // Tìm TextBox MaTG tương ứng
-                string maTGTextBoxName = currentTextBox.Name.Replace("TenTG", "MaTG");
-                TextBox correspondingMaTG = this.Controls.Find(maTGTextBoxName, true).FirstOrDefault() as TextBox;
-
-                if (correspondingMaTG != null)
-                {
-                    if (!string.IsNullOrEmpty(tenTG))
-                    {
-                        correspondingMaTG.Text = TacGiaDAL.GetMaTacGiaByTen(tenTG);
-                    }
-                    else
-                    {
-                        correspondingMaTG.Text = string.Empty;
-                    }
-                }
-            }
-        }
-
         private void txtTimKiem_Enter(object sender, EventArgs e)
         {
             if (txtTimKiem.Text == "Nhập từ khóa tìm kiếm")
@@ -731,6 +719,82 @@ namespace LIB2.Forms
                 txtTimKiem.Text = "Nhập từ khóa tìm kiếm";
                 txtTimKiem.ForeColor = Color.Gray;
             }
+        }
+
+        private void txtTenTG1_TextChanged(object sender, EventArgs e)
+        {
+            HandleTextChanged(txtTenTG1, txtMaTG1);
+        }
+
+        private void txtTenTG2_TextChanged(object sender, EventArgs e)
+        {
+            HandleTextChanged(txtTenTG2, txtMaTG2);
+        }
+
+        private void txtTenTG3_TextChanged(object sender, EventArgs e)
+        {
+            HandleTextChanged(txtTenTG3, txtMaTG3);
+        }
+
+        private void txtTenTG4_TextChanged(object sender, EventArgs e)
+        {
+            HandleTextChanged(txtTenTG4, txtMaTG4);
+        }
+
+        private void txtTenTG5_TextChanged(object sender, EventArgs e)
+        {
+            HandleTextChanged(txtTenTG5, txtMaTG5);
+        }
+
+        private void txtTenTG6_TextChanged(object sender, EventArgs e)
+        {
+            HandleTextChanged(txtTenTG6, txtMaTG6);
+        }
+
+        private void txtTenTG7_TextChanged(object sender, EventArgs e)
+        {
+            HandleTextChanged(txtTenTG7, txtMaTG7);
+        }
+
+        private void txtTenTG8_TextChanged(object sender, EventArgs e)
+        {
+            HandleTextChanged(txtTenTG8, txtMaTG8);
+        }
+
+        private void txtTenTG9_TextChanged(object sender, EventArgs e)
+        {
+            HandleTextChanged(txtTenTG9, txtMaTG9);
+        }
+
+        private void txtTenTG10_TextChanged(object sender, EventArgs e)
+        {
+            HandleTextChanged(txtTenTG10, txtMaTG10);
+        }
+        private void HandleTextChanged(MaterialSkin.Controls.MaterialTextBox2 txtTenTG, MaterialSkin.Controls.MaterialTextBox2 txtMaTG)
+        {
+            if (!string.IsNullOrEmpty(txtTenTG.Text))
+            {
+                string tenTG = txtTenTG.Text.Trim();
+                string maTG = TacGiaDAL.GetMaTacGiaByTen(tenTG);
+
+                if (!string.IsNullOrEmpty(maTG))
+                {
+                    txtMaTG.Text = maTG;
+                }
+                else
+                {
+                    txtMaTG.Text = string.Empty;
+                }
+            }
+            else
+            {
+                txtMaTG.Text = string.Empty;
+            }
+        }
+
+        private void txtTenTG_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
